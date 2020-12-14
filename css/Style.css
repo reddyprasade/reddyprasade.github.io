@@ -1,0 +1,247 @@
+﻿/* reddy.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.reddy-serif{font-family:serif}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.reddy-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+
+
+/* image */
+/* .reddy-image{border-radius:80%;}img{vertical-align:middle}a{color:inherit} */
+.reddy-table,.reddy-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.reddy-table-all{border:1px solid #ccc}
+.reddy-bordered tr,.reddy-table-all tr{border-bottom:1px solid #ddd}.reddy-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.reddy-table-all tr:nth-child(odd){background-color:#fff}.reddy-table-all tr:nth-child(even){background-color:#f1f1f1}
+.reddy-hoverable tbody tr:hover,.reddy-ul.reddy-hoverable li:hover{background-color:#ccc}.reddy-centered tr th,.reddy-centered tr td{text-align:center}
+.reddy-table td,.reddy-table th,.reddy-table-all td,.reddy-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.reddy-table th:first-child,.reddy-table td:first-child,.reddy-table-all th:first-child,.reddy-table-all td:first-child{padding-left:16px}
+.reddy-btn,.reddy-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.reddy-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.reddy-btn,.reddy-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.reddy-disabled,.reddy-btn:disabled,.reddy-button:disabled{cursor:not-allowed;opacity:0.3}.reddy-disabled *,:disabled *{pointer-events:none}
+.reddy-btn.reddy-disabled:hover,.reddy-btn:disabled:hover{box-shadow:none}
+.reddy-badge,.reddy-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.reddy-badge{border-radius:50%}
+.reddy-ul{list-style-type:none;padding:0;margin:0}.reddy-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.reddy-ul li:last-child{border-bottom:none}
+.reddy-tooltip,.reddy-display-container{position:relative}.reddy-tooltip .reddy-text{display:none}.reddy-tooltip:hover .reddy-text{display:inline-block}
+.reddy-ripple:active{opacity:0.5}.reddy-ripple{transition:opacity 0s}
+.reddy-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.reddy-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.reddy-dropdown-click,.reddy-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.reddy-dropdown-hover:hover .reddy-dropdown-content{display:block}
+.reddy-dropdown-hover:first-child,.reddy-dropdown-click:hover{background-color:#ccc;color:#000}
+.reddy-dropdown-hover:hover > .reddy-button:first-child,.reddy-dropdown-click:hover > .reddy-button:first-child{background-color:#ccc;color:#000}
+.reddy-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+.reddy-check,.reddy-radio{width:24px;height:24px;position:relative;top:6px}
+.reddy-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.reddy-bar-block .reddy-dropdown-hover,.reddy-bar-block .reddy-dropdown-click{width:100%}
+.reddy-bar-block .reddy-dropdown-hover .reddy-dropdown-content,.reddy-bar-block .reddy-dropdown-click .reddy-dropdown-content{min-width:100%}
+.reddy-bar-block .reddy-dropdown-hover .reddy-button,.reddy-bar-block .reddy-dropdown-click .reddy-button{width:100%;text-align:left;padding:8px 16px}
+.reddy-main,#main{transition:margin-left .4s}
+.reddy-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.reddy-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.reddy-bar{width:100%;overflow:hidden}.reddy-center .reddy-bar{display:inline-block;width:auto}
+.reddy-bar .reddy-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.reddy-bar .reddy-dropdown-hover,.reddy-bar .reddy-dropdown-click{position:static;float:left}
+.reddy-bar .reddy-button{white-space:normal}
+.reddy-bar-block .reddy-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.reddy-bar-block.reddy-center .reddy-bar-item{text-align:center}.reddy-block{display:block;width:100%}
+.reddy-responsive{display:block;overflow-x:auto}
+.reddy-container:after,.reddy-container:before,.reddy-panel:after,.reddy-panel:before,.reddy-row:after,.reddy-row:before,.reddy-row-padding:after,.reddy-row-padding:before,
+.reddy-cell-row:before,.reddy-cell-row:after,.reddy-clear:after,.reddy-clear:before,.reddy-bar:before,.reddy-bar:after{content:"";display:table;clear:both}
+.reddy-col,.reddy-half,.reddy-third,.reddy-twothird,.reddy-threequarter,.reddy-quarter{float:left;width:100%}
+.reddy-col.s1{width:8.33333%}.reddy-col.s2{width:16.66666%}.reddy-col.s3{width:24.99999%}.reddy-col.s4{width:33.33333%}
+.reddy-col.s5{width:41.66666%}.reddy-col.s6{width:49.99999%}.reddy-col.s7{width:58.33333%}.reddy-col.s8{width:66.66666%}
+.reddy-col.s9{width:74.99999%}.reddy-col.s10{width:83.33333%}.reddy-col.s11{width:91.66666%}.reddy-col.s12{width:99.99999%}
+@media (min-width:601px){.reddy-col.m1{width:8.33333%}.reddy-col.m2{width:16.66666%}.reddy-col.m3,.reddy-quarter{width:24.99999%}.reddy-col.m4,.reddy-third{width:33.33333%}
+.reddy-col.m5{width:41.66666%}.reddy-col.m6,.reddy-half{width:49.99999%}.reddy-col.m7{width:58.33333%}.reddy-col.m8,.reddy-twothird{width:66.66666%}
+.reddy-col.m9,.reddy-threequarter{width:74.99999%}.reddy-col.m10{width:83.33333%}.reddy-col.m11{width:91.66666%}.reddy-col.m12{width:99.99999%}}
+@media (min-width:993px){.reddy-col.l1{width:8.33333%}.reddy-col.l2{width:16.66666%}.reddy-col.l3{width:24.99999%}.reddy-col.l4{width:33.33333%}
+.reddy-col.l5{width:41.66666%}.reddy-col.l6{width:49.99999%}.reddy-col.l7{width:58.33333%}.reddy-col.l8{width:66.66666%}
+.reddy-col.l9{width:74.99999%}.reddy-col.l10{width:83.33333%}.reddy-col.l11{width:91.66666%}.reddy-col.l12{width:99.99999%}}
+.reddy-rest{overflow:hidden}.reddy-stretch{margin-left:-16px;margin-right:-16px}
+.reddy-content,.reddy-auto{margin-left:auto;margin-right:auto}.reddy-content{max-width:980px}.reddy-auto{max-width:1140px}
+.reddy-cell-row{display:table;width:100%}.reddy-cell{display:table-cell}
+.reddy-cell-top{vertical-align:top}.reddy-cell-middle{vertical-align:middle}.reddy-cell-bottom{vertical-align:bottom}
+.reddy-hide{display:none!important}.reddy-show-block,.reddy-show{display:block!important}.reddy-show-inline-block{display:inline-block!important}
+@media (max-width:1205px){.reddy-auto{max-width:95%}}
+@media (max-width:600px){.reddy-modal-content{margin:0 10px;width:auto!important}.reddy-modal{padding-top:30px}
+.reddy-dropdown-hover.reddy-mobile .reddy-dropdown-content,.reddy-dropdown-click.reddy-mobile .reddy-dropdown-content{position:relative}	
+.reddy-hide-small{display:none!important}.reddy-mobile{display:block;width:100%!important}.reddy-bar-item.reddy-mobile,.reddy-dropdown-hover.reddy-mobile,.reddy-dropdown-click.reddy-mobile{text-align:center}
+.reddy-dropdown-hover.reddy-mobile,.reddy-dropdown-hover.reddy-mobile .reddy-btn,.reddy-dropdown-hover.reddy-mobile .reddy-button,.reddy-dropdown-click.reddy-mobile,.reddy-dropdown-click.reddy-mobile .reddy-btn,.reddy-dropdown-click.reddy-mobile .reddy-button{width:100%}}
+@media (max-width:768px){.reddy-modal-content{width:500px}.reddy-modal{padding-top:50px}}
+@media (min-width:993px){.reddy-modal-content{width:900px}.reddy-hide-large{display:none!important}.reddy-sidebar.reddy-collapse{display:block!important}}
+@media (max-width:992px) and (min-width:601px){.reddy-hide-medium{display:none!important}}
+@media (max-width:992px){.reddy-sidebar.reddy-collapse{display:none}.reddy-main{margin-left:0!important;margin-right:0!important}.reddy-auto{max-width:100%}}
+.reddy-top,.reddy-bottom{position:fixed;width:100%;z-index:1}.reddy-top{top:0}.reddy-bottom{bottom:0}
+.reddy-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.reddy-display-topleft{position:absolute;left:0;top:0}.reddy-display-topright{position:absolute;right:0;top:0}
+.reddy-display-bottomleft{position:absolute;left:0;bottom:0}.reddy-display-bottomright{position:absolute;right:0;bottom:0}
+.reddy-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.reddy-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.reddy-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.reddy-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.reddy-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.reddy-display-container:hover .reddy-display-hover{display:block}.reddy-display-container:hover span.reddy-display-hover{display:inline-block}.reddy-display-hover{display:none}
+.reddy-display-position{position:absolute}
+.reddy-circle{border-radius:50%}
+.reddy-round-small{border-radius:2px}.reddy-round,.reddy-round-medium{border-radius:4px}.reddy-round-large{border-radius:8px}.reddy-round-xlarge{border-radius:16px}.reddy-round-xxlarge{border-radius:32px}
+.reddy-row-padding,.reddy-row-padding>.reddy-half,.reddy-row-padding>.reddy-third,.reddy-row-padding>.reddy-twothird,.reddy-row-padding>.reddy-threequarter,.reddy-row-padding>.reddy-quarter,.reddy-row-padding>.reddy-col{padding:0 8px}
+.reddy-container,.reddy-panel{padding:0.01em 16px}.reddy-panel{margin-top:16px;margin-bottom:16px}
+.reddy-code,.reddy-codespan{font-family:Consolas,"courier new";font-size:16px}
+.reddy-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.reddy-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+.reddy-card,.reddy-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.reddy-card-4,.reddy-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.reddy-spin{animation:reddy-spin 2s infinite linear}@keyframes reddy-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.reddy-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.reddy-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.reddy-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.reddy-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.reddy-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.reddy-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.reddy-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.reddy-animate-input{transition:width 0.4s ease-in-out}.reddy-animate-input:focus{width:100%!important}
+.reddy-opacity,.reddy-hover-opacity:hover{opacity:0.60}.reddy-opacity-off,.reddy-hover-opacity-off:hover{opacity:1}
+.reddy-opacity-max{opacity:0.25}.reddy-opacity-min{opacity:0.75}
+.reddy-greyscale-max,.reddy-grayscale-max,.reddy-hover-greyscale:hover,.reddy-hover-grayscale:hover{filter:grayscale(100%)}
+.reddy-greyscale,.reddy-grayscale{filter:grayscale(75%)}.reddy-greyscale-min,.reddy-grayscale-min{filter:grayscale(50%)}
+.reddy-sepia{filter:sepia(75%)}.reddy-sepia-max,.reddy-hover-sepia:hover{filter:sepia(100%)}.reddy-sepia-min{filter:sepia(50%)}
+.reddy-tiny{font-size:10px!important}.reddy-small{font-size:12px!important}.reddy-medium{font-size:15px!important}.reddy-large{font-size:18px!important}
+.reddy-xlarge{font-size:24px!important}.reddy-xxlarge{font-size:36px!important}.reddy-xxxlarge{font-size:48px!important}.reddy-jumbo{font-size:64px!important}
+.reddy-left-align{text-align:left!important}.reddy-right-align{text-align:right!important}.reddy-justify{text-align:justify!important}.reddy-center{text-align:center!important}
+.reddy-border-0{border:0!important}.reddy-border{border:1px solid #ccc!important}
+.reddy-border-top{border-top:1px solid #ccc!important}.reddy-border-bottom{border-bottom:1px solid #ccc!important}
+.reddy-border-left{border-left:1px solid #ccc!important}.reddy-border-right{border-right:1px solid #ccc!important}
+.reddy-topbar{border-top:6px solid #ccc!important}.reddy-bottombar{border-bottom:6px solid #ccc!important}
+.reddy-leftbar{border-left:6px solid #ccc!important}.reddy-rightbar{border-right:6px solid #ccc!important}
+.reddy-section,.reddy-code{margin-top:16px!important;margin-bottom:16px!important}
+.reddy-margin{margin:16px!important}.reddy-margin-top{margin-top:16px!important}.reddy-margin-bottom{margin-bottom:16px!important}
+.reddy-margin-left{margin-left:16px!important}.reddy-margin-right{margin-right:16px!important}
+.reddy-padding-small{padding:4px 8px!important}.reddy-padding{padding:8px 16px!important}.reddy-padding-large{padding:12px 24px!important}
+.reddy-padding-16{padding-top:16px!important;padding-bottom:16px!important}.reddy-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.reddy-padding-32{padding-top:32px!important;padding-bottom:32px!important}.reddy-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.reddy-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.reddy-left{float:left!important}.reddy-right{float:right!important}
+.reddy-button:hover{color:#000!important;background-color:#ccc!important}
+.reddy-transparent,.reddy-hover-none:hover{background-color:transparent!important}
+.reddy-hover-none:hover{box-shadow:none!important}
+
+
+/* Colors */
+.reddy-amber,.reddy-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.reddy-aqua,.reddy-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.reddy-blue,.reddy-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.reddy-light-blue,.reddy-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.reddy-brown,.reddy-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.reddy-cyan,.reddy-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.reddy-blue-grey,.reddy-hover-blue-grey:hover,.reddy-blue-gray,.reddy-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.reddy-green,.reddy-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.reddy-light-green,.reddy-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.reddy-indigo,.reddy-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.reddy-khaki,.reddy-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.reddy-lime,.reddy-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.reddy-orange,.reddy-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.reddy-deep-orange,.reddy-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.reddy-pink,.reddy-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.reddy-purple,.reddy-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.reddy-deep-purple,.reddy-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.reddy-red,.reddy-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.reddy-sand,.reddy-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.reddy-teal,.reddy-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.reddy-yellow,.reddy-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.reddy-white,.reddy-hover-white:hover{color:#000!important;background-color:#fff!important}
+.reddy-black,.reddy-hover-black:hover{color:#fff!important;background-color:#000!important}
+.reddy-grey,.reddy-hover-grey:hover,.reddy-gray,.reddy-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.reddy-light-grey,.reddy-hover-light-grey:hover,.reddy-light-gray,.reddy-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.reddy-dark-grey,.reddy-hover-dark-grey:hover,.reddy-dark-gray,.reddy-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.reddy-pale-red,.reddy-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.reddy-pale-green,.reddy-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.reddy-pale-yellow,.reddy-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.reddy-pale-blue,.reddy-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+
+/* Text Colors */
+.reddy-text-amber,.reddy-hover-text-amber:hover{color:#ffc107!important}
+.reddy-text-aqua,.reddy-hover-text-aqua:hover{color:#00ffff!important}
+.reddy-text-blue,.reddy-hover-text-blue:hover{color:#2196F3!important}
+.reddy-text-light-blue,.reddy-hover-text-light-blue:hover{color:#87CEEB!important}
+.reddy-text-brown,.reddy-hover-text-brown:hover{color:#795548!important}
+.reddy-text-cyan,.reddy-hover-text-cyan:hover{color:#00bcd4!important}
+.reddy-text-blue-grey,.reddy-hover-text-blue-grey:hover,.reddy-text-blue-gray,.reddy-hover-text-blue-gray:hover{color:#607d8b!important}
+.reddy-text-green,.reddy-hover-text-green:hover{color:#4CAF50!important}
+.reddy-text-light-green,.reddy-hover-text-light-green:hover{color:#8bc34a!important}
+.reddy-text-indigo,.reddy-hover-text-indigo:hover{color:#3f51b5!important}
+.reddy-text-khaki,.reddy-hover-text-khaki:hover{color:#b4aa50!important}
+.reddy-text-lime,.reddy-hover-text-lime:hover{color:#cddc39!important}
+.reddy-text-orange,.reddy-hover-text-orange:hover{color:#ff9800!important}
+.reddy-text-deep-orange,.reddy-hover-text-deep-orange:hover{color:#ff5722!important}
+.reddy-text-pink,.reddy-hover-text-pink:hover{color:#e91e63!important}
+.reddy-text-purple,.reddy-hover-text-purple:hover{color:#9c27b0!important}
+.reddy-text-deep-purple,.reddy-hover-text-deep-purple:hover{color:#673ab7!important}
+.reddy-text-red,.reddy-hover-text-red:hover{color:#f44336!important}
+.reddy-text-sand,.reddy-hover-text-sand:hover{color:#fdf5e6!important}
+.reddy-text-teal,.reddy-hover-text-teal:hover{color:#009688!important}
+.reddy-text-yellow,.reddy-hover-text-yellow:hover{color:#d2be0e!important}
+.reddy-text-white,.reddy-hover-text-white:hover{color:#fff!important}
+.reddy-text-black,.reddy-hover-text-black:hover{color:#000!important}
+.reddy-text-grey,.reddy-hover-text-grey:hover,.reddy-text-gray,.reddy-hover-text-gray:hover{color:#757575!important}
+.reddy-text-light-grey,.reddy-hover-text-light-grey:hover,.reddy-text-light-gray,.reddy-hover-text-light-gray:hover{color:#f1f1f1!important}
+.reddy-text-dark-grey,.reddy-hover-text-dark-grey:hover,.reddy-text-dark-gray,.reddy-hover-text-dark-gray:hover{color:#3a3a3a!important}
+
+
+/* Border Colors */
+.reddy-border-amber,.reddy-hover-border-amber:hover{border-color:#ffc107!important}
+.reddy-border-aqua,.reddy-hover-border-aqua:hover{border-color:#00ffff!important}
+.reddy-border-blue,.reddy-hover-border-blue:hover{border-color:#2196F3!important}
+.reddy-border-light-blue,.reddy-hover-border-light-blue:hover{border-color:#87CEEB!important}
+.reddy-border-brown,.reddy-hover-border-brown:hover{border-color:#795548!important}
+.reddy-border-cyan,.reddy-hover-border-cyan:hover{border-color:#00bcd4!important}
+.reddy-border-blue-grey,.reddy-hover-border-blue-grey:hover,.reddy-border-blue-gray,.reddy-hover-border-blue-gray:hover{border-color:#607d8b!important}
+.reddy-border-green,.reddy-hover-border-green:hover{border-color:#4CAF50!important}
+.reddy-border-light-green,.reddy-hover-border-light-green:hover{border-color:#8bc34a!important}
+.reddy-border-indigo,.reddy-hover-border-indigo:hover{border-color:#3f51b5!important}
+.reddy-border-khaki,.reddy-hover-border-khaki:hover{border-color:#f0e68c!important}
+.reddy-border-lime,.reddy-hover-border-lime:hover{border-color:#cddc39!important}
+.reddy-border-orange,.reddy-hover-border-orange:hover{border-color:#ff9800!important}
+.reddy-border-deep-orange,.reddy-hover-border-deep-orange:hover{border-color:#ff5722!important}
+.reddy-border-pink,.reddy-hover-border-pink:hover{border-color:#e91e63!important}
+.reddy-border-purple,.reddy-hover-border-purple:hover{border-color:#9c27b0!important}
+.reddy-border-deep-purple,.reddy-hover-border-deep-purple:hover{border-color:#673ab7!important}
+.reddy-border-red,.reddy-hover-border-red:hover{border-color:#f44336!important}
+.reddy-border-sand,.reddy-hover-border-sand:hover{border-color:#fdf5e6!important}
+.reddy-border-teal,.reddy-hover-border-teal:hover{border-color:#009688!important}
+.reddy-border-yellow,.reddy-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.reddy-border-white,.reddy-hover-border-white:hover{border-color:#fff!important}
+.reddy-border-black,.reddy-hover-border-black:hover{border-color:#000!important}
+.reddy-border-grey,.reddy-hover-border-grey:hover,.reddy-border-gray,.reddy-hover-border-gray:hover{border-color:#9e9e9e!important}
+.reddy-border-light-grey,.reddy-hover-border-light-grey:hover,.reddy-border-light-gray,.reddy-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+.reddy-border-dark-grey,.reddy-hover-border-dark-grey:hover,.reddy-border-dark-gray,.reddy-hover-border-dark-gray:hover{border-color:#616161!important}
+.reddy-border-pale-red,.reddy-hover-border-pale-red:hover{border-color:#ffe7e7!important}.reddy-border-pale-green,.reddy-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+.reddy-border-pale-yellow,.reddy-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.reddy-border-pale-blue,.reddy-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+
+
+
+
+
