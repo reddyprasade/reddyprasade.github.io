@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - Reddy Prasad E</title>
+    <meta name="description" content="Courses offered by Reddy Prasad E on AI, Machine Learning, and Data Science." />
+    <meta name="author" content="Reddy Prasad E" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Icons/DSC05273_32_32.ico" />
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-800">Reddy Prasad E.</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="index.html#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="index.html#tools" class="text-gray-600 hover:text-indigo-600 transition duration-300">Tools</a>
+                <a href="courses.html" class="text-indigo-600 font-semibold">Courses</a>
+                <a href="index.html#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
+                <a href="index.html#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+             <button id="mobile-menu-button-courses" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+          <!-- Mobile Menu -->
+        <div id="mobile-menu-courses" class="hidden md:hidden">
+            <a href="index.html#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+            <a href="index.html#tools" class="block py-2 px-4 text-sm hover:bg-gray-200">Tools</a>
+            <a href="courses.html" class="block py-2 px-4 text-sm bg-gray-100">Courses</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-200">Resume</a>
+            <a href="index.html#services" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+            <a href="index.html#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Courses Section -->
+        <section id="courses" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-800">My Courses</h2>
+                    <p class="text-lg text-gray-600 mt-2">Unlock your potential with in-depth courses on AI and Machine Learning.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Course Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/6366f1/ffffff?text=Intro+to+AI" alt="Introduction to AI">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Introduction to AI</h3>
+                            <p class="text-gray-600 mb-6">A comprehensive introduction to the world of Artificial Intelligence, from basic concepts to modern applications.</p>
+                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Course Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/8b5cf6/ffffff?text=Deep+Learning" alt="Deep Learning Specialization">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Deep Learning Specialization</h3>
+                            <p class="text-gray-600 mb-6">Dive deep into neural networks, convolutional networks, RNNs, and more to build powerful deep learning models.</p>
+                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Course Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/ec4899/ffffff?text=Generative+AI" alt="Generative AI with LLMs">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Generative AI with LLMs</h3>
+                            <p class="text-gray-600 mb-6">Explore the exciting field of Generative AI and learn to build applications with Large Language Models.</p>
+                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Course Card 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Advanced+GenAI" alt="Advanced Generative AI">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Advanced Generative AI</h3>
+                            <p class="text-gray-600 mb-6">Master the art of creating novel content with advanced Generative AI techniques and models.</p>
+                            <a href="#" class="bg-teal-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-teal-700 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Course Card 5 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/f59e0b/ffffff?text=AutoGen" alt="Microsoft Autogen">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Microsoft Autogen</h3>
+                            <p class="text-gray-600 mb-6">Build and manage multi-agent conversational applications with Microsoft's powerful Autogen framework.</p>
+                            <a href="#" class="bg-amber-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-amber-600 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Course Card 6 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/3b82f6/ffffff?text=Agentic+AI" alt="Agentic AI Systems">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Agentic AI Systems</h3>
+                            <p class="text-gray-600 mb-6">Design and develop autonomous AI agents that can reason, plan, and execute complex tasks.</p>
+                            <a href="#" class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Reddy Prasad E. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
+            
+            // Mobile menu toggle
+            $('#mobile-menu-button-courses').click(function(){
+                $('#mobile-menu-courses').toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

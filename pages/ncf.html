@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Neural Collaborative Filtering - Reddy Prasad E</title>
+    <meta name="description" content="Details about the Neural Collaborative Filtering based Recommendation system project by Reddy Prasad E." />
+    <meta name="author" content="Reddy Prasad E" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/Icons/DSC05273_32_32.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased font-inter bg-gray-50 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-gray-800 flex items-center">
+                <img src="../images/profile/img2.png" alt="Reddy Prasad E Logo" class="h-10 w-10 rounded-full mr-2">
+                Reddy Prasad E.
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="../index.html#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="../index.html#tools" class="text-gray-600 hover:text-indigo-600 transition duration-300">Tools</a>
+                <a href="../index.html#courses" class="text-gray-600 hover:text-indigo-600 transition duration-300">Courses</a>
+                <a href="../index.html#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
+                <a href="../index.html#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="../index.html#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+            <a href="../index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+            <a href="../index.html#tools" class="block py-2 px-4 text-sm hover:bg-gray-200">Tools</a>
+            <a href="../index.html#courses" class="block py-2 px-4 text-sm hover:bg-gray-200">Courses</a>
+            <a href="../index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-200">Resume</a>
+            <a href="../index.html#services" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+            <a href="../index.html#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="project-detail" class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6">Project: Neural Collaborative Filtering based Recommendation System</h1>
+            <p class="text-gray-600 mb-8">From CLIENTOCLARIFY.AI PVT LTD (Jun 2019 - Dec 2021) [cite: 235, 238]</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Business Problem Statement</h2>
+            <p class="text-gray-600 mb-6">The challenge was to build a highly accurate and real-time personalized recommendation system for movies, TV shows, and web series, especially for local broadcast channels and Video-on-Demand (VOD) services, with efficient data handling for large datasets. [cite: 239, 240, 241, 243]</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Solution</h2>
+            <ul class="list-disc list-inside text-gray-600 mb-6">
+                <li>Collected 1.76 PB of data and built data pipelines and dashboards for real-time data visualization and recent trends in movies, TV shows, and web series. [cite: 239]</li>
+                <li>Built a Softmax DNN recommendation system model for movies, web series, and TV shows with 90% accuracy for local broadcast channels. [cite: 240]</li>
+                <li>Built the Neural Collaborative Filtering (NCF) Model with 98% accuracy on live data, incorporating different tuning optimization algorithms and parameters. [cite: 241]</li>
+                <li>Built Matrix Factorization, Large-scale Retrieval, and multiple candidate generators using different sources, followed by a re-ranking approach to filter candidates. [cite: 242]</li>
+                <li>Achieved 10% faster real-time personalized recommendations user experiences at scale in VOD. [cite: 243]</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Tools & Frameworks Used</h2>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>Softmax DNN [cite: 240]</li>
+                <li>Neural Collaborative Filtering (NCF) [cite: 241]</li>
+                <li>Matrix Factorization [cite: 242]</li>
+                <li>Data Pipelines [cite: 239]</li>
+                <li>Dashboards (for data visualization) [cite: 239, 356]</li>
+                <li>Python [cite: 338]</li>
+                <li>NumPy, Scikit-learn, TensorFlow, PyTorch, Keras (general AI/ML libraries) [cite: 295, 351]</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Reddy Prasad E. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed by <a href="https://reddyprasade.github.io/" rel="nofollow" class="underline hover:text-indigo-400">Reddy Prasad</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        $('#mobile-menu-button').click(function(){
+            $('#mobile-menu').toggleClass('hidden');
+        });
+    </script>
+</body>
+</html>
