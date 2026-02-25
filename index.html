@@ -115,7 +115,7 @@
                 <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
                 <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Toggle mobile menu">
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
@@ -136,9 +136,9 @@
         <!-- Hero Section -->
         <section id="about" class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center gap-12">
             <div class="md:w-1/2 lg:w-3/5 text-center md:text-left">
-                 <h3 class="text-4xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-2" data-aos="fade-up">
+                 <h1 class="text-4xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-2" data-aos="fade-up">
                     Hey everyone, I'm Reddy Prasad
-                </h3>
+                </h1>
                 <h2 class="text-lg md:text-xl font-semibold text-indigo-600 mb-6" data-aos="fade-up" data-aos-delay="200">
                     AIML Engineer | Data Scientist | GenAI | Prompt Engineer
                 </h2>
@@ -164,15 +164,15 @@
                 <div class="owl-carousel owl-theme relative">
                     <div class="item"><a href="pages/co2_prediction.html"><img src="images/project/BITIT.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: CO2 Prediction for BITIT"></a></div>
                     <div class="item"><a href="pages/prajna_framework.html"><img src="images/project/TMTS.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Prajna Framework for TMTS"></a></div>
-                    <div class="item"><a href="pages/neural_collaborative_filtering.html"><img src="images/project/C2C.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Neural Collaborative Filtering for C2C"></a></div>
-                    <div class="item"><a href="pages/fine_prediction.html"><img src="images/project/C2C_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Fine Prediction for C2C"></a></div>
+                    <div class="item"><a href="pages/ncf.html"><img src="images/project/C2C.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Neural Collaborative Filtering for C2C"></a></div>
+                    <div class="item"><a href="pages/fine_predication.html"><img src="images/project/C2C_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Fine Prediction for C2C"></a></div>
                     <div class="item"><a href="pages/utility_bill_parsing.html"><img src="images/project/C2C_2.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Utility Bill Parsing for C2C"></a></div>
                     <div class="item"><img src="images/project/C2C_3.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 3"></div>
                     <div class="item"><img src="images/project/C2C_4.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 4"></div>
                     <div class="item"><img src="images/project/C2C_5.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 5"></div>
                     <div class="item"><a href="pages/boman_ai.html"><img src="images/project/Sumeru_Boman_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Boman.ai for Sumeru"></a></div>
                     <div class="item"><img src="images/project/Girikon.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project for Girikon"></div>
-                    <div class="item"><a href="pages/l_and_d.html"><img src="images/project/L&D.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: L&D Automation"></a></div>
+                    <div class="item"><img src="images/project/L&D.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: L&D Automation"></div>
                     <div class="item"><a href="pages/playground.html"><img src="images/project/PlayGround.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: AI Playground"></a></div>
                     <div class="item"><img src="images/project/PlayGround_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: AI Playground Dashboard"></div>
                 </div>
@@ -503,7 +503,7 @@
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="800">
                         <img src="images/services/rl.png" alt="Reinforcement Learning Icon" class="h-40 w-full object-contain mb-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Reinforcement Learning</h3>
-                        <p class="text-gray-600 leading-relaxed">Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties.It is commonly used in applications like robotics, gaming, and autonomous systems to optimize behavior over time.</p>
+        <p class="text-gray-600 leading-relaxed">Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. It is commonly used in applications like robotics, gaming, and autonomous systems to optimize behavior over time.</p>
                     </div>
                      <!-- Service Card -->
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="900">
@@ -600,7 +600,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">&copy; 2024 Reddy Prasad E. All rights reserved.</p>
+            <p class="text-sm">&copy; <span id="current-year"></span> Reddy Prasad E. All rights reserved.</p>
             <p class="text-xs text-gray-400 mt-2">Designed by <a href="https://reddyprasade.github.io/" rel="nofollow" class="underline hover:text-indigo-400">Reddy Prasad</a></p>
         </div>
     </footer>
@@ -659,9 +659,21 @@
             // When the mobile menu button is clicked, it toggles the 'hidden' class
             // on the mobile menu div, showing or hiding it.
             $('#mobile-menu-button').click(function(){
-                $('#mobile-menu').toggleClass('hidden');
+                var $menu = $('#mobile-menu');
+                $menu.toggleClass('hidden');
+                var expanded = !$menu.hasClass('hidden');
+                $(this).attr('aria-expanded', expanded);
+            });
+
+            // Close mobile menu when a nav link inside it is clicked
+            $('#mobile-menu a').click(function(){
+                $('#mobile-menu').addClass('hidden');
+                $('#mobile-menu-button').attr('aria-expanded', false);
             });
         });
+
+        // Set dynamic copyright year (runs independently of jQuery)
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
