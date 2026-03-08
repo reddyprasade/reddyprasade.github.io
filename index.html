@@ -1,679 +1,850 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reddy Prasad E - AI/ML Engineer</title>
     <meta name="description" content="Portfolio of Reddy Prasad E, an experienced AI/ML Engineer specializing in Generative AI, Data Science, and Deep Learning." />
-    <meta name="keywords" content="AI/ML Engineer, Generative AI, Data Science, Deep Learning, Prompt Engineer, Machine Learning, Artificial Intelligence, NLP, Computer Vision, Predictive Analytics, MLOps, Azure OpenAI, Hugging Face, LangChain, AutoGen, Reddy Prasad E, EY GDS, Girikon, Sumeru Solutions, IITBX, AI Consultant, ML Researcher, Data Analyst" />
+    <meta name="keywords" content="AI/ML Engineer, Generative AI, Data Science, Deep Learning, Prompt Engineer, Machine Learning, Artificial Intelligence, NLP, Computer Vision, Predictive Analytics, MLOps, Azure OpenAI, Hugging Face, LangChain, AutoGen, Reddy Prasad E" />
     <meta name="author" content="Reddy Prasad E" />
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/Icons/DSC05273_32_32.ico" />
-
-    <!-- AOS (Animate On Scroll) CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <style>
-        /* Custom styles for the body and Owl Carousel */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light gray background */
-            color: #1f2937; /* Dark gray text */
-        }
-        /* Ensures carousel items have consistent padding */
-        .owl-carousel .item {
-            padding: 1rem;
-        }
-        /* Custom navigation button styling for Owl Carousel */
-        .owl-nav button {
-            background: #4f46e5 !important; /* Indigo-600 */
-            color: white !important;
-            border-radius: 9999px !important; /* Full rounded */
-            padding: 0.5rem 1rem !important;
-            font-size: 1.5rem !important;
-            line-height: 1 !important;
-            transition: background-color 0.3s ease, transform 0.3s ease !important;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-        .owl-nav button:hover {
-            background: #4338ca !important; /* Indigo-700 */
-            transform: translateY(-50%) scale(1.05) !important;
-        }
-        .owl-nav .owl-prev {
-            left: -20px; /* Adjust as needed */
-        }
-        .owl-nav .owl-next {
-            right: -20px; /* Adjust as needed */
-        }
-        /* Hide default Owl Carousel dots if not needed, or style them */
-        .owl-dots {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .owl-dots .owl-dot span {
-            width: 10px;
-            height: 10px;
-            margin: 5px 7px;
-            background: #d1d5db; /* Gray-300 */
-            display: block;
-            -webkit-backface-visibility: visible;
-            transition: opacity 200ms ease;
-            border-radius: 30px;
-        }
-        .owl-dots .owl-dot.active span,
-        .owl-dots .owl-dot:hover span {
-            background: #4f46e5; /* Indigo-600 */
-        }
-
-        /* Responsive adjustments for Owl Carousel navigation */
-        @media (max-width: 768px) {
-            .owl-nav button {
-                padding: 0.3rem 0.6rem !important;
-                font-size: 1rem !important;
-            }
-            .owl-nav .owl-prev {
-                left: 0px;
-            }
-            .owl-nav .owl-next {
-                right: 0px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800 flex items-center" aria-label="Reddy Prasad E Home">
-                <img src="images/profile/img2.png" alt="Reddy Prasad E Logo" class="h-10 w-10 rounded-full mr-2 object-cover">
-                Reddy Prasad E.
-            </a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
-                <a href="#tools" class="text-gray-600 hover:text-indigo-600 transition duration-300">Tools</a>
-                <a href="#courses" class="text-gray-600 hover:text-indigo-600 transition duration-300">Courses</a>
-                <a href="#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
-                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" class="py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2 group" aria-label="Reddy Prasad E Home">
+            <div class="w-9 h-9 rounded-full overflow-hidden ring-2 ring-indigo-400 ring-offset-2">
+                <img src="images/profile/img2.png" alt="Reddy Prasad E" class="w-full h-full object-cover">
             </div>
-            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">About</a>
-            <a href="#projects" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Projects</a>
-            <a href="#tools" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Tools</a>
-            <a href="#courses" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Courses</a>
-            <a href="#resume" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Resume</a>
-            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Services</a>
-            <a href="#skills" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Skills</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 transition duration-200">Contact</a>
+            <span class="text-white font-bold text-lg group-hover:text-indigo-400 transition-colors">RP<span class="text-indigo-400">.</span></span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="#about" class="nav-link-item text-white">About</a>
+            <a href="#projects" class="nav-link-item text-white">Projects</a>
+            <a href="#tools" class="nav-link-item text-white">Tools</a>
+            <a href="#courses" class="nav-link-item text-white">Courses</a>
+            <a href="#resume" class="nav-link-item text-white">Resume</a>
+            <a href="#services" class="nav-link-item text-white">Services</a>
+            <a href="#skills" class="nav-link-item text-white">Skills</a>
+            <a href="#contact" class="bg-indigo-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-indigo-700 transition-all hover:shadow-lg hover:shadow-indigo-500/30">Contact</a>
         </div>
-    </header>
+        <button id="mobile-menu-button" class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="block w-5 h-0.5 bg-white rounded-full transition-all duration-300" id="menu-line-1"></span>
+            <span class="block w-5 h-0.5 bg-white rounded-full transition-all duration-300" id="menu-line-2"></span>
+            <span class="block w-5 h-0.5 bg-white rounded-full transition-all duration-300" id="menu-line-3"></span>
+        </button>
+    </div>
+</nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="about" class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center gap-12">
-            <div class="md:w-1/2 lg:w-3/5 text-center md:text-left">
-                 <h1 class="text-4xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-2" data-aos="fade-up">
-                    Hey everyone, I'm Reddy Prasad
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-50 lg:hidden pt-20 px-6 shadow-2xl">
+    <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 p-2" aria-label="Close menu">
+        <i class="fas fa-times text-xl"></i>
+    </button>
+    <div class="flex flex-col gap-1">
+        <a href="#about" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">About</a>
+        <a href="#projects" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Projects</a>
+        <a href="#tools" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Tools</a>
+        <a href="#courses" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Courses</a>
+        <a href="#resume" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Resume</a>
+        <a href="#services" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Services</a>
+        <a href="#skills" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Skills</a>
+        <a href="#contact" class="mt-4 bg-indigo-600 text-white text-center py-3 px-4 rounded-full font-semibold hover:bg-indigo-700 transition-colors mobile-nav-link">Contact Me</a>
+    </div>
+    <div class="flex gap-4 mt-8 px-4">
+        <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all"><i class="fab fa-linkedin-in text-sm"></i></a>
+        <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-youtube text-sm"></i></a>
+        <a href="mailto:reddyprasade@gmail.com" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-indigo-600 hover:text-white transition-all"><i class="fas fa-envelope text-sm"></i></a>
+    </div>
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section" id="about">
+    <div class="hero-grid"></div>
+    <div class="hero-blob-1"></div>
+    <div class="hero-blob-2"></div>
+    <div class="container mx-auto px-6 relative z-10 pt-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12 py-16">
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                <div class="hero-badge justify-center lg:justify-start">
+                    <span class="w-2 h-2 rounded-full bg-green-400" style="animation: pulse 2s infinite;"></span>
+                    Available for new opportunities
+                </div>
+                <h1 class="hero-title mb-4">
+                    Hi, I'm<br>
+                    <span class="highlight">Reddy Prasad</span>
                 </h1>
-                <h2 class="text-lg md:text-xl font-semibold text-indigo-600 mb-6" data-aos="fade-up" data-aos-delay="200">
-                    AIML Engineer | Data Scientist | GenAI | Prompt Engineer
-                </h2>
-                <p class="mt-6 text-lg text-gray-700 max-w-xl mx-auto md:mx-0 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                    I'm Reddy Prasad, an AI/ML Engineer and Consultant passionate about building intelligent systems. With expertise in Generative AI, Data Science, and Deep Learning, I craft innovative solutions that transform complex data into actionable insights. My journey includes impactful roles at leading firms like EY, Girikon, and Sumeru, where I've applied cutting-edge AI across diverse industries including transportation, energy, and IT, driving efficiency and innovation.
+                <div class="flex items-center gap-2 mb-6 justify-center lg:justify-start flex-wrap">
+                    <span class="text-slate-400 text-lg font-medium">I build</span>
+                    <span class="typing-text text-lg" id="typing-element">&nbsp;</span>
+                </div>
+                <p class="hero-subtitle mx-auto lg:mx-0 mb-8">
+                    AI/ML Engineer &amp; Consultant passionate about building intelligent systems. Expert in Generative AI, Data Science, and Deep Learning — crafting solutions that transform complex data into actionable insights.
                 </p>
-                <div class="mt-10" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#contact" class="bg-indigo-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300 inline-block">
-                        Get a free quote
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
+                    <a href="#contact" class="hero-btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Let's Collaborate
+                    </a>
+                    <a href="#projects" class="hero-btn-secondary">
+                        <i class="fas fa-folder-open"></i>
+                        View Projects
                     </a>
                 </div>
-            </div>
-            <div class="md:w-1/2 lg:w-2/5 mt-10 md:mt-0 flex justify-center" data-aos="zoom-in" data-aos-delay="800">
-                <img src="images/Icons/DSC05273.png" alt="Reddy Prasad, an AI/ML Engineer" class="rounded-full w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover shadow-2xl border-4 border-indigo-200">
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="bg-gradient-to-r from-indigo-50 to-blue-50 py-20">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">My Projects</h2>
-                <p class="text-center text-gray-600 text-lg mb-12">"Artificial intelligence is the new electricity."</p>
-                <div class="owl-carousel owl-theme relative">
-                    <div class="item"><a href="pages/co2_prediction.html"><img src="images/project/BITIT.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: CO2 Prediction for BITIT"></a></div>
-                    <div class="item"><a href="pages/prajna_framework.html"><img src="images/project/TMTS.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Prajna Framework for TMTS"></a></div>
-                    <div class="item"><a href="pages/ncf.html"><img src="images/project/C2C.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Neural Collaborative Filtering for C2C"></a></div>
-                    <div class="item"><a href="pages/fine_predication.html"><img src="images/project/C2C_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Fine Prediction for C2C"></a></div>
-                    <div class="item"><a href="pages/utility_bill_parsing.html"><img src="images/project/C2C_2.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Utility Bill Parsing for C2C"></a></div>
-                    <div class="item"><img src="images/project/C2C_3.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 3"></div>
-                    <div class="item"><img src="images/project/C2C_4.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 4"></div>
-                    <div class="item"><img src="images/project/C2C_5.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project C2C 5"></div>
-                    <div class="item"><a href="pages/boman_ai.html"><img src="images/project/Sumeru_Boman_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: Boman.ai for Sumeru"></a></div>
-                    <div class="item"><img src="images/project/Girikon.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project for Girikon"></div>
-                    <div class="item"><img src="images/project/L&D.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: L&D Automation"></div>
-                    <div class="item"><a href="pages/playground.html"><img src="images/project/PlayGround.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: AI Playground"></a></div>
-                    <div class="item"><img src="images/project/PlayGround_1.png" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 w-full h-auto" alt="Project: AI Playground Dashboard"></div>
+                <div class="hero-social justify-center lg:justify-start">
+                    <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/reddyprasade/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/reddyprasad_e/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:reddyprasade@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- Tools & Frameworks Section -->
-        <section id="tools" class="py-20 bg-white">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Tools & Frameworks</h2>
-                <div class="owl-carousel owl-theme">
-                    <!-- Replaced placeholder images with more visually appealing ones, or kept placeholders with good alt text -->
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/6366f1/ffffff?text=TensorFlow" class="rounded-lg shadow-md" alt="TensorFlow Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/8b5cf6/ffffff?text=PyTorch" class="rounded-lg shadow-md" alt="PyTorch Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/ec4899/ffffff?text=Scikit-learn" class="rounded-lg shadow-md" alt="Scikit-learn Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/10b981/ffffff?text=Keras" class="rounded-lg shadow-md" alt="Keras Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/f59e0b/ffffff?text=Pandas" class="rounded-lg shadow-md" alt="Pandas Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/3b82f6/ffffff?text=NumPy" class="rounded-lg shadow-md" alt="NumPy Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/ef4444/ffffff?text=OpenAI" class="rounded-lg shadow-md" alt="OpenAI Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/a855f7/ffffff?text=Hugging+Face" class="rounded-lg shadow-md" alt="Hugging Face Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/22c55e/ffffff?text=LangChain" class="rounded-lg shadow-md" alt="LangChain Logo"></div>
-                    <div class="item flex justify-center"><img src="https://placehold.co/150x80/f97316/ffffff?text=AutoGen" class="rounded-lg shadow-md" alt="AutoGen Logo"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Section -->
-        <section id="courses" class="bg-gradient-to-r from-blue-50 to-indigo-50 py-20">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800">My Courses</h2>
-                    <p class="text-lg text-gray-600 mt-2">Unlock your potential with in-depth courses on AI and Machine Learning.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Course Card 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/6366f1/ffffff?text=Intro+to+AI" alt="Introduction to AI Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Introduction to AI</h3>
-                            <p class="text-gray-600 mb-6">A comprehensive introduction to the world of Artificial Intelligence, from basic concepts to modern applications.</p>
-                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
+            <div class="lg:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 z-10 float-badge">
+                        <span class="text-2xl">&#x1F916;</span>
+                        <div>
+                            <div class="text-xs font-bold text-gray-800">AI/ML Expert</div>
+                            <div class="text-xs text-gray-500">7+ Years</div>
                         </div>
                     </div>
-                    <!-- Course Card 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="400">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/8b5cf6/ffffff?text=Deep+Learning" alt="Deep Learning Specialization Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Deep Learning Specialization</h3>
-                            <p class="text-gray-600 mb-6">Dive deep into neural networks, convolutional networks, RNNs, and more to build powerful deep learning models.</p>
-                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="600">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/ec4899/ffffff?text=Generative+AI" alt="Generative AI with LLMs Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Generative AI with LLMs</h3>
-                            <p class="text-gray-600 mb-6">Explore the exciting field of Generative AI and learn to build applications with Large Language Models.</p>
-                            <a href="#" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 4 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Advanced+GenAI" alt="Advanced Generative AI Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Advanced Generative AI</h3>
-                            <p class="text-gray-600 mb-6">Master the art of creating novel content with advanced Generative AI techniques and models.</p>
-                            <a href="#" class="bg-teal-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-teal-700 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 5 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="400">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/f59e0b/ffffff?text=AutoGen" alt="Microsoft Autogen Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Microsoft Autogen</h3>
-                            <p class="text-gray-600 mb-6">Build and manage multi-agent conversational applications with Microsoft's powerful Autogen framework.</p>
-                            <a href="#" class="bg-amber-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-amber-600 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 6 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="600">
-                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/3b82f6/ffffff?text=Agentic+AI" alt="Agentic AI Systems Course Image">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Agentic AI Systems</h3>
-                            <p class="text-gray-600 mb-6">Design and develop autonomous AI agents that can reason, plan, and execute complex tasks.</p>
-                            <a href="#" class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section id="resume" class="bg-white py-20">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                    <div data-aos="fade-right" data-aos-delay="200">
-                        <h2 class="text-4xl font-bold text-center md:text-left text-gray-800 mb-10">Experience</h2>
-                        <div class="relative border-l-4 border-indigo-200 pl-6">
-                            <!-- New Experience Item: EY -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">
-                                    Associate Manager
-                                    <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">March 2025 - Present (~1 year)</span>
-                                </h3>
-                                <p class="block mb-1 text-sm font-medium text-indigo-700">Job Title: Senior-GR 3(CS&amp;A)-Enterprise Risk-I</p>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">
-                                    EY GDS Consulting – AI and DATA
-                                    <img src="images/logos/ey_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=EY';" alt="EY Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full">
-                                </p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <ul class="list-disc list-inside text-gray-700 leading-relaxed ml-4 space-y-1">
-                                    <li>Lead the development and integration of Gen AI solutions across enterprise domains.</li>
-                                    <li>Bridge data science, NLP, and LLMs to design scalable models.</li>
-                                    <li>Optimize AI pipelines and implement cutting-edge tools.</li>
-                                    <li>Elevate business decision-making and operational efficiency.</li>
-                                    <li>Collaborate with cross-functional teams to identify business challenges and deliver AI-driven strategies.</li>
-                                    <li>Ensure model fairness, performance, and compliance with trusted AI principles.</li>
-                                </ul>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                <ul class="list-disc list-inside text-gray-700 leading-relaxed ml-4 space-y-2">
-                                    <li>
-                                        <span class="font-medium">DDWAW-DAED &ndash; Guardrails Model Training_I</span>
-                                        <p class="text-sm text-gray-600 ml-4 mt-0.5">End-to-end LLM fine-tuning PoC on AWS covering dataset onboarding, SDG pipeline, evaluation framework, and iterative model training for an enterprise Wealth &amp; Asset Management client.</p>
-                                    </li>
-                                    <li>
-                                        <span class="font-medium">DDXAP &ndash; Tokio Marine Global AI Hub Pilot</span>
-                                        <p class="text-sm text-gray-600 ml-4 mt-0.5">AI-Enhanced Incident Reporting Assistant (TMSR) that automates comparative analysis of police reports and incident descriptions using Gen AI, delivering bilingual alerts in English and Portuguese.</p>
-                                    </li>
-                                    <li>
-                                        <span class="font-medium">DDXGP &ndash; GenAI Studio Insurance IIP Release</span>
-                                        <p class="text-sm text-gray-600 ml-4 mt-0.5">GenAI Studio release for the Insurance industry, delivering an Intelligent Insurance Platform with AI-powered automation and insights.</p>
-                                    </li>
-                                    <li>
-                                        <span class="font-medium">Paid Model: Text to Video Model for Incident Reconstruction for Claimant Adjustment</span>
-                                        <p class="text-sm text-gray-600 ml-4 mt-0.5">Text-to-video generative model that reconstructs insurance incident scenarios from written descriptions to assist in claimant adjustment workflows.</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Experience Item: Girikon -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">AIML Engineer <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2024</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">Girikon <img src="images/logos/girikon_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=Girikon';" alt="Girikon Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full"></p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <ul class="list-disc list-inside text-gray-700 leading-relaxed ml-4 space-y-1">
-                                    <li>Developed and deployed LLM-powered applications, focusing on agentic workflows, advanced prompt engineering, evaluations, model feedback and tuning mechanisms, and safety guardrails.</li>
-                                    <li>Engineered end-to-end LLM systems, including scalable data ingestion pipelines, reliable service orchestration, backend application state management, and data layer implementation.</li>
-                                    <li>Analyzed and optimized complex, large-scale technology solutions for tactical and strategic business objectives and technical challenges.</li>
-                                    <li>Provided engineering support for AI-driven solutions that enhance and streamline work processes, ensuring reliable, secure, and scalable applications aligned with business priorities.</li>
-                                    <li>Acted as a thought leader in developing standards and enterprise best practices for engineering complex and large-scale technology solutions.</li>
-                                    <li>Designed, coded, tested, and documented solutions that align with both product-specific and enterprise-wide goals.</li>
-                                    <li>Led the development of frameworks and solutions that provide both vertical support to specific business-aligned products and horizontal capabilities that scale across multiple platforms.</li>
-                                    <li>Collaborated and consulted with key technical experts, senior technology teams, and external industry groups to resolve complex technical issues and achieve goals.</li>
-                                    <li>Led projects, teams, and served as a peer mentor.</li>
-                                    <li>Stayed current on emerging technologies in AI to contribute to the strategy discussion for future capability development.</li>
-                                </ul>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                <ul class="list-disc list-inside mt-4 text-gray-600 ml-4 space-y-1">
-                                    <li>Girik AUK</li>
-                                    <li>Girik Hire</li>
-                                    <li>GirikSMS</li>
-                                    <li>Girik QA</li>
-                                    <li>LLM Model Name: Baali Voice to Voice and Voice to Text Model and Summarization Model From 1B to 32B parameter Model</li>
-                                </ul>
-                            </div>
-                            <!-- Experience Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">AI/ML Consultant <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2022</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">Sumeru Solutions Pvt Ltd <img src="images/logos/sumeru_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=Sumeru';" alt="Sumeru Solutions Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full"></p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed ml-4">Assess business needs, identify opportunities, and develop tailored strategies to leverage AI/ML technologies for improved efficiency, innovation, and competitive advantage.</p>
-                                 <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                 <ul class="list-disc list-inside mt-4 text-gray-600 ml-4 space-y-1">
-                                    <li>Boman.AI</li>
-                                    <li>Abhyaasa: Meditation - SriSri</li>
-                                </ul>
-                            </div>
-                             <!-- Experience Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Machine Learning Researcher <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2019</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">ClientoClarify.AI <img src="images/logos/clientoclarify_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=ClientoClarify';" alt="ClientoClarify.AI Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full"></p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed ml-4">Develop end-to-end machine learning and deep learning applications. Leverage the CRISP-DM methodology to solve complex business problems across various industries.</p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                <ul class="list-disc list-inside mt-4 text-gray-600 ml-4 space-y-1">
-                                    <li>Face Recognition App</li>
-                                    <li>Analysis SaaS Platform</li>
-                                </ul>
-                            </div>
-                             <!-- Experience Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Technology Enabler <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2018</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">TMTS (BroadNexus) <img src="images/logos/tmts_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=TMTS';" alt="TMTS (BroadNexus) Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full"></p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed ml-4">Develop and evaluate machine learning models using the Prajna Framework. Focus on building robust and efficient models across various domains, ensuring they meet the highest performance standards.</p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                 <ul class="list-disc list-inside mt-4 text-gray-600 ml-4 space-y-1">
-                                    <li>Prajna Bot</li>
-                                    <li>Chat Bot Models</li>
-                                </ul>
-                            </div>
-                             <!-- Experience Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Research Assistant <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2017</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">IITBX <img src="images/logos/iitbx_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/e2e8f0/64748b?text=IITBX';" alt="IITBX Logo" class="inline-block h-6 w-auto ml-2 align-middle rounded-full"></p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Role and Responsibility:</h4>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed ml-4">Contribute to cutting-edge machine learning and AI research projects. Support Ph.D. scholars in conducting experiments and analyzing simulation results. Teach undergraduate courses in machine learning with Python and data science with R. Build data pipelines, develop machine learning models, and create data visualizations for dashboards.</p>
-                                <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Projects:</h4>
-                                <ul class="list-disc list-inside text-gray-600 ml-4 space-y-1">
-                                    <li>Prediction Of CO2</li>
-                                    <li>CO2 monitor dashboard</li>
-                                </ul>
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-ring">
+                            <div class="hero-image-inner">
+                                <img src="images/Icons/DSC05273.png" alt="Reddy Prasad E - AI/ML Engineer" class="hero-image">
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="400">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center md:text-left">Education</h2>
-                         <div class="relative border-l-4 border-indigo-200 pl-6">
-                            <!-- Education Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Master of Technology <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2016</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">Computer Science - SVCET (JNTU-A)</p>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed">Leveraged my passion for machine learning by completing an M.Tech in Computer Science (specialization) at Sri Venkateswara College of Engineering Technology (SVCET-Autonomous), Chittoor (JNTU-A)</p>
-                            </div>
-                            <!-- Education Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Bachelor of Technology <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2014</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">Information Technology - SVPCET (JNTU-A)</p>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed">A specialized field within computer science focused on applying technology to solve business problems at Sri Venkatesa Perumal College of Engineering & Technology(SVPCET-Autonomous), Puttur JNTU-A</p>
-                            </div>
-                             <!-- Education Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Higher Secondary Education <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2010</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">MPC - Rayalaseema Jr College</p>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed">Higher Secondary Education in MPC (Mathematics, Physics, Chemistry) at Rayalaseema Jr College in Tirupati.</p>
-                            </div>
-                             <!-- Education Item -->
-                            <div class="mb-10 relative">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-indigo-600 rounded-full -left-10 top-0 ring-8 ring-white text-white font-bold text-sm">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                                </span>
-                                <h3 class="flex flex-col sm:flex-row items-start sm:items-center mb-1 text-xl font-semibold text-gray-900">Secondary Education <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full ml-0 sm:ml-3 mt-2 sm:mt-0">2008</span></h3>
-                                <p class="block mb-3 text-base font-normal leading-none text-gray-500">R.R. High School</p>
-                                <p class="text-base font-normal text-gray-700 leading-relaxed">Secondary Education at R.R. High School, Bairagipatteda in Tirupati.</p>
-                            </div>
-                        </div>
+                    <div class="absolute -bottom-4 -left-4 bg-indigo-600 text-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 z-10">
+                        <i class="fas fa-code text-sm"></i>
+                        <div class="text-xs font-bold">GenAI Specialist</div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Offerings Service</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/services/ml.png" alt="Machine Learning Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Machine Learning</h3>
-                        <p class="text-gray-600 leading-relaxed">Machine learning enables systems to learn from data and make predictions without explicit programming. It has applications in areas like image recognition, natural language processing, and recommendation systems.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/services/dl.jpg" alt="Deep Learning Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Deep Learning</h3>
-                        <p class="text-gray-600 leading-relaxed">Deep learning is a subset of machine learning that uses neural networks with multiple layers to model complex patterns in large datasets. It excels in tasks such as image and speech recognition, often outperforming traditional algorithms.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/services/llm.png" alt="LLM & SLM Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">LLM & SLM</h3>
-                        <p class="text-gray-600 leading-relaxed">Large Language Models (LLMs) are advanced AI systems trained on vast amounts of text data to understand and generate human-like language. They excel in tasks like conversation, text generation, and language translation, leveraging deep learning techniques.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/services/da.png" alt="Data Analysis Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Data Analysis</h3>
-                        <p class="text-gray-600 leading-relaxed">Data analysis involves inspecting, cleaning, and interpreting data to extract meaningful insights and inform decision-making. It employs statistical methods and tools to identify trends, patterns, and relationships within datasets.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="500">
-                        <img src="images/services/pa.png" alt="Predictive Analytics Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Predictive Analytics</h3>
-                        <p class="text-gray-600 leading-relaxed">Predictive analytics uses statistical algorithms and machine learning techniques to analyze historical data and forecast future outcomes. It helps businesses make informed decisions by identifying trends, risks, and opportunities based on data-driven predictions.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="600">
-                        <img src="images/services/cv.png" alt="Computer Vision Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Computer Vision</h3>
-                        <p class="text-gray-600 leading-relaxed">Computer vision is a field of artificial intelligence that enables machines to interpret and understand visual information from the world, such as images and videos. It powers applications like facial recognition, object detection, and autonomous navigation.</p>
-                    </div>
-                     <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="700">
-                        <img src="images/services/nlp.png" alt="Natural Language Processing Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Natural Language Processing</h3>
-                        <p class="text-gray-600 leading-relaxed">Natural Language Processing (NLP) is a branch of artificial intelligence that focuses on the interaction between computers and human language. It enables machines to understand, interpret, and generate text or speech, facilitating applications like chatbots, translation, and sentiment analysis.</p>
-                    </div>
-                     <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="800">
-                        <img src="images/services/rl.png" alt="Reinforcement Learning Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Reinforcement Learning</h3>
-        <p class="text-gray-600 leading-relaxed">Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. It is commonly used in applications like robotics, gaming, and autonomous systems to optimize behavior over time.</p>
-                    </div>
-                     <!-- Service Card -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="900">
-                        <img src="images/services/Agents.png" alt="Chatbot Development Icon" class="h-40 w-full object-contain mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Chatbot Development</h3>
-                        <p class="text-gray-600 leading-relaxed">A chatbot is an AI program designed to simulate conversation with users, often through text or voice interfaces. They can assist with customer service, provide information, and engage users in interactive dialogues, leveraging technologies like natural language processing and machine learning.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-white">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Core Skills</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Skill Category 1: Generative AI & LLMs -->
-                    <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Generative AI & LLMs</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left mx-auto max-w-fit space-y-1">
-                            <li>Large Language Models (LLMs)</li>
-                            <li>Prompt Engineering</li>
-                            <li>Fine-tuning LLMs</li>
-                            <li>RAG Implementation</li>
-                            <li>Generative Models (GANs, VAEs)</li>
-                            <li>Agentic AI Systems</li>
-                        </ul>
-                    </div>
-                    <!-- Skill Category 2: Machine Learning & Deep Learning -->
-                    <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Machine Learning & Deep Learning</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left mx-auto max-w-fit space-y-1">
-                            <li>Supervised/Unsupervised Learning</li>
-                            <li>Reinforcement Learning</li>
-                            <li>Computer Vision (CV)</li>
-                            <li>Natural Language Processing (NLP)</li>
-                            <li>Model Deployment (MLOps)</li>
-                        </ul>
-                    </div>
-                    <!-- Skill Category 3: Data Science & Analytics -->
-                    <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Science & Analytics</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left mx-auto max-w-fit space-y-1">
-                            <li>Data Analysis & Visualization</li>
-                            <li>Statistical Modeling</li>
-                            <li>Predictive Analytics</li>
-                            <li>Feature Engineering</li>
-                            <li>Database Management (SQL, NoSQL)</li>
-                        </ul>
-                    </div>
-                    <!-- Skill Category 4: Programming & Tools -->
-                    <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Programming & Tools</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left mx-auto max-w-fit space-y-1">
-                            <li>Python (TensorFlow, PyTorch, Scikit-learn)</li>
-                            <li>Cloud Platforms (Azure, AWS)</li>
-                            <li>Git & Version Control</li>
-                            <li>Docker</li>
-                            <li>API Development</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white py-20">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Interested? Then Contact Me</h2>
-                    <p class="text-lg text-gray-600 mt-2">Say hello or ask a question!</p>
-                </div>
-                <div class="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
-                     <a href="mailto:reddyprasade@gmail.com" class="text-lg font-medium text-indigo-600 hover:text-indigo-800 transition-colors duration-300 underline-offset-4 hover:underline">reddyprasade@gmail.com</a>
-                     <div class="flex space-x-6">
-                        <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 transform hover:scale-125 transition-all duration-300" aria-label="LinkedIn Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                        </a>
-                        <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-red-600 transform hover:scale-125 transition-all duration-300" aria-label="YouTube Channel">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                        </a>
-                         <a href="https://www.facebook.com/reddyprasade/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transform hover:scale-125 transition-all duration-300" aria-label="Facebook Profile">
-                           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg>
-                        </a>
-                         <a href="https://www.instagram.com/reddyprasad_e/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-pink-600 transform hover:scale-125 transition-all duration-300" aria-label="Instagram Profile">
-                           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.058-1.689-.072-4.948-.072zM7.24 12c0-2.62 2.12-4.74 4.74-4.74s4.74 2.12 4.74 4.74-2.12 4.74-4.74 4.74-4.74-2.12-4.74-4.74zm4.74 3.74c1.62 0 2.94-1.32 2.94-2.94s-1.32-2.94-2.94-2.94-2.94 1.32-2.94 2.94 1.32 2.94 2.94 2.94zm2.94-7.74c-.54 0-.98-.44-.98-.98s.44-.98.98-.98.98.44.98.98-.44.98-.98.98z"/></svg>
-                        </a>
-                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">&copy; <span id="current-year"></span> Reddy Prasad E. All rights reserved.</p>
-            <p class="text-xs text-gray-400 mt-2">Designed by <a href="https://reddyprasade.github.io/" rel="nofollow" class="underline hover:text-indigo-400">Reddy Prasad</a></p>
         </div>
-    </footer>
+    </div>
+    <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+        <span>Scroll</span>
+    </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- ===== STATS SECTION ===== -->
+<section class="bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number">7+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Companies Served</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Courses Offered</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script>
-        $(document).ready(function(){
-            // Initialize AOS (Animate On Scroll) library
-            AOS.init({
-                duration: 800, // Animation duration in milliseconds
-                once: true,    // Whether animation should happen only once - while scrolling down
-            });
+<main>
+<!-- ===== ABOUT SECTION ===== -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2" data-aos="fade-right">
+                <div class="section-badge"><i class="fas fa-user"></i>&nbsp; About Me</div>
+                <h2 class="section-title mb-4">
+                    Passionate about building<br>
+                    <span class="gradient-text">Intelligent Systems</span>
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-6 text-base">
+                    I'm Reddy Prasad, an AI/ML Engineer and Consultant with 7+ years of experience building intelligent systems. My expertise spans Generative AI, Data Science, and Deep Learning — crafting innovative solutions that transform complex data into actionable insights.
+                </p>
+                <p class="text-slate-600 leading-relaxed mb-8 text-base">
+                    I've held impactful roles at leading firms like EY GDS, Girikon, and Sumeru Solutions, applying cutting-edge AI across diverse industries including insurance, transportation, energy, and IT — driving efficiency and innovation at scale.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">Generative AI</div>
+                            <div class="text-xs text-gray-500 mt-0.5">LLMs, RAG, Fine-tuning, Agents</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-database"></i></div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">Data Science</div>
+                            <div class="text-xs text-gray-500 mt-0.5">Analytics, Visualization, ML</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-eye"></i></div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">Computer Vision</div>
+                            <div class="text-xs text-gray-500 mt-0.5">Object Detection, Recognition</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">NLP &amp; LLMs</div>
+                            <div class="text-xs text-gray-500 mt-0.5">Transformers, Chatbots, NER</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-indigo-50 to-cyan-50 rounded-2xl p-8 border border-indigo-100">
+                    <h3 class="font-bold text-gray-800 mb-6 text-lg">Current Role at EY GDS</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 mt-0.5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-indigo-600"></div>
+                            </div>
+                            <p class="text-slate-600 text-sm">Lead development and integration of Gen AI solutions across enterprise domains</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 mt-0.5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-indigo-600"></div>
+                            </div>
+                            <p class="text-slate-600 text-sm">Bridge data science, NLP, and LLMs to design scalable models</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 mt-0.5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-indigo-600"></div>
+                            </div>
+                            <p class="text-slate-600 text-sm">Optimize AI pipelines and implement cutting-edge AI tools</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 mt-0.5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-indigo-600"></div>
+                            </div>
+                            <p class="text-slate-600 text-sm">Ensure model fairness, performance, and compliance with trusted AI principles</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-indigo-100 flex items-center gap-3">
+                        <span class="text-2xl">&#x1F3E2;</span>
+                        <div>
+                            <div class="font-bold text-gray-800 text-sm">Ernst &amp; Young GDS</div>
+                            <div class="text-xs text-indigo-600 font-medium">Associate Manager &middot; March 2025 &ndash; Present</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            // Initialize Owl Carousel for the projects section
-            // This carousel will loop, have a margin between items, show navigation buttons,
-            // autoplay with a timeout, and pause autoplay on hover.
-            // Responsive settings adjust the number of items shown based on screen width.
-            $('#projects .owl-carousel').owlCarousel({
-                loop:true,
-                margin:20,
-                nav:true,
-                autoplay:true,
-                autoplayTimeout:3000,
-                autoplayHoverPause:true,
-                responsive:{
-                    0:{ items:1 },   // 1 item on screens less than 600px wide
-                    600:{ items:2 }, // 2 items on screens 600px and wider
-                    1000:{ items:3 } // 3 items on screens 1000px and wider
-                }
-            });
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="projects-section py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge light"><i class="fas fa-folder-open"></i>&nbsp; Portfolio</div>
+            <h2 class="section-title light mb-3">My Projects</h2>
+            <p class="section-subtitle light">"Artificial intelligence is the new electricity." &ndash; Andrew Ng</p>
+            <div class="divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme relative px-6" id="project-carousel" data-aos="fade-up" data-aos-delay="200">
+            <div class="item"><a href="pages/co2_prediction.html" class="project-item block"><img src="images/project/BITIT.png" alt="CO2 Prediction for BITIT" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><a href="pages/prajna_framework.html" class="project-item block"><img src="images/project/TMTS.png" alt="Prajna Framework for TMTS" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><a href="pages/ncf.html" class="project-item block"><img src="images/project/C2C.png" alt="Neural Collaborative Filtering" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><a href="pages/fine_predication.html" class="project-item block"><img src="images/project/C2C_1.png" alt="Fine Prediction for C2C" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><a href="pages/utility_bill_parsing.html" class="project-item block"><img src="images/project/C2C_2.png" alt="Utility Bill Parsing for C2C" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><div class="project-item"><img src="images/project/C2C_3.png" alt="Project C2C 3" loading="lazy"></div></div>
+            <div class="item"><div class="project-item"><img src="images/project/C2C_4.png" alt="Project C2C 4" loading="lazy"></div></div>
+            <div class="item"><div class="project-item"><img src="images/project/C2C_5.png" alt="Project C2C 5" loading="lazy"></div></div>
+            <div class="item"><a href="pages/boman_ai.html" class="project-item block"><img src="images/project/Sumeru_Boman_1.png" alt="Boman.ai for Sumeru" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><div class="project-item"><img src="images/project/Girikon.png" alt="Project for Girikon" loading="lazy"></div></div>
+            <div class="item"><div class="project-item"><img src="images/project/L&D.png" alt="L&D Automation" loading="lazy"></div></div>
+            <div class="item"><a href="pages/playground.html" class="project-item block"><img src="images/project/PlayGround.png" alt="AI Playground" loading="lazy"><div class="project-overlay"><span class="project-view-btn">View Project <i class="fas fa-arrow-right ml-1"></i></span></div></a></div>
+            <div class="item"><div class="project-item"><img src="images/project/PlayGround_1.png" alt="AI Playground Dashboard" loading="lazy"></div></div>
+        </div>
+    </div>
+</section>
 
-            // Initialize Owl Carousel for the tools section
-            // This carousel will loop, have a margin between items, hide navigation buttons,
-            // show dots for pagination, autoplay with a shorter timeout, and pause autoplay on hover.
-            // Responsive settings adjust the number of items shown based on screen width.
-            $('#tools .owl-carousel').owlCarousel({
-                loop:true,
-                margin:30,
-                nav:false,
-                dots: true,
-                autoplay:true,
-                autoplayTimeout:2500,
-                autoplayHoverPause:true,
-                responsive:{
-                    0:{ items:2 },   // 2 items on screens less than 600px wide
-                    600:{ items:4 }, // 4 items on screens 600px and wider
-                    1000:{ items:6 } // 6 items on screens 1000px and wider
-                }
-            });
+<!-- ===== TOOLS SECTION ===== -->
+<section id="tools" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-tools"></i>&nbsp; Technology Stack</div>
+            <h2 class="section-title mb-3">Tools &amp; <span class="gradient-text">Frameworks</span></h2>
+            <p class="section-subtitle">The technologies I work with to build intelligent systems.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#FF6F00,#FFA000)">TF</div><span class="tool-name">TensorFlow</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#EE4C2C,#FF7B63)">PT</div><span class="tool-name">PyTorch</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8)">SK</div><span class="tool-name">Scikit-learn</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#D00000,#FF4444)">KR</div><span class="tool-name">Keras</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#150458,#3A3480)">PD</div><span class="tool-name">Pandas</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#4DABF7,#1971C2)">NP</div><span class="tool-name">NumPy</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#10A37F,#0D7A5F)">OA</div><span class="tool-name">OpenAI</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#FF9D00,#FFB347)">HF</div><span class="tool-name">Hugging Face</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#16A34A,#15803D)">LC</div><span class="tool-name">LangChain</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">AG</div><span class="tool-name">AutoGen</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#0078D4,#0062B0)">AZ</div><span class="tool-name">Azure</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#FF9900,#E68900)">AW</div><span class="tool-name">AWS</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#F05032,#C0392B)">GIT</div><span class="tool-name">Git</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#2496ED,#1A73C9)">DK</div><span class="tool-name">Docker</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#3776AB,#2E5E91)">PY</div><span class="tool-name">Python</span></div>
+            <div class="tool-badge"><div class="tool-icon" style="background:linear-gradient(135deg,#009688,#00796B)">FA</div><span class="tool-name">FastAPI</span></div>
+        </div>
+    </div>
+</section>
 
-            // Mobile menu toggle functionality
-            // When the mobile menu button is clicked, it toggles the 'hidden' class
-            // on the mobile menu div, showing or hiding it.
-            $('#mobile-menu-button').click(function(){
-                var $menu = $('#mobile-menu');
-                $menu.toggleClass('hidden');
-                var expanded = !$menu.hasClass('hidden');
-                $(this).attr('aria-expanded', expanded);
-            });
+<!-- ===== COURSES SECTION ===== -->
+<section id="courses" class="py-20" style="background:#f8fafc">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-graduation-cap"></i>&nbsp; Learning</div>
+            <h2 class="section-title mb-3">My <span class="gradient-text">Courses</span></h2>
+            <p class="section-subtitle">Unlock your potential with in-depth courses on AI and Machine Learning.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/4f46e5/ffffff?text=AI+Fundamentals" alt="Introduction to AI" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-indigo-600 text-white">Beginner</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Introduction to AI</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">A comprehensive introduction to Artificial Intelligence from basic concepts to modern applications.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>20 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/7c3aed/ffffff?text=Deep+Learning" alt="Deep Learning Specialization" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-purple-600 text-white">Intermediate</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Deep Learning Specialization</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">Dive deep into neural networks, CNNs, RNNs, and more to build powerful deep learning models.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>40 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/db2777/ffffff?text=Generative+AI" alt="Generative AI with LLMs" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-pink-600 text-white">Advanced</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Generative AI with LLMs</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">Explore Generative AI and learn to build applications with Large Language Models.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>35 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-pink-50 text-pink-700 hover:bg-pink-600 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/059669/ffffff?text=Advanced+GenAI" alt="Advanced Generative AI" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-emerald-600 text-white">Advanced</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Advanced Generative AI</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">Master the art of creating novel content with advanced Generative AI techniques.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>50 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/d97706/ffffff?text=AutoGen" alt="Microsoft Autogen" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-amber-500 text-white">Intermediate</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Microsoft AutoGen</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">Build multi-agent conversational applications with Microsoft's powerful Autogen framework.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>25 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-amber-50 text-amber-700 hover:bg-amber-500 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img class="course-img" src="https://placehold.co/600x400/2563eb/ffffff?text=Agentic+AI" alt="Agentic AI Systems" loading="lazy">
+                    <div class="absolute top-3 left-3"><span class="course-badge bg-blue-600 text-white">Advanced</span></div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Agentic AI Systems</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed flex-1">Design and develop autonomous AI agents that can reason, plan, and execute complex tasks.</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-400 mb-4"><i class="fas fa-clock"></i><span>45 hours</span><span>&middot;</span><i class="fas fa-certificate"></i><span>Certificate</span></div>
+                    <a href="#" class="course-btn bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            // Close mobile menu when a nav link inside it is clicked
-            $('#mobile-menu a').click(function(){
-                $('#mobile-menu').addClass('hidden');
-                $('#mobile-menu-button').attr('aria-expanded', false);
-            });
-        });
+<!-- ===== RESUME SECTION ===== -->
+<section id="resume" class="bg-white py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-briefcase"></i>&nbsp; Career</div>
+            <h2 class="section-title mb-3">Experience &amp; <span class="gradient-text">Education</span></h2>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div data-aos="fade-right" data-aos-delay="100">
+                <h3 class="text-xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center"><i class="fas fa-briefcase text-indigo-600 text-sm"></i></span>
+                    Work Experience
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Associate Manager</h4>
+                                <span class="timeline-year">Mar 2025 &ndash; Present</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">EY GDS Consulting &ndash; AI and DATA</p>
+                            <ul class="text-gray-600 text-xs space-y-1 leading-relaxed">
+                                <li>&#x2022; Lead Gen AI solutions across enterprise domains</li>
+                                <li>&#x2022; Bridge data science, NLP, and LLMs to design scalable models</li>
+                                <li>&#x2022; Projects: DDWAW Guardrails, Tokio Marine AI Hub, GenAI Studio Insurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">AIML Engineer</h4>
+                                <span class="timeline-year">2024</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">Girikon</p>
+                            <ul class="text-gray-600 text-xs space-y-1 leading-relaxed">
+                                <li>&#x2022; Developed and deployed LLM-powered applications</li>
+                                <li>&#x2022; Engineered end-to-end LLM systems with scalable data pipelines</li>
+                                <li>&#x2022; Projects: Girik AUK, Girik Hire, GirikSMS, Baali Voice Model</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">AI/ML Consultant</h4>
+                                <span class="timeline-year">2022</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">Sumeru Solutions Pvt Ltd</p>
+                            <p class="text-gray-600 text-xs leading-relaxed">Assessed business needs, identified AI/ML opportunities. Projects: Boman.AI, Abhyaasa: Meditation &ndash; SriSri</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">ML Researcher</h4>
+                                <span class="timeline-year">2019</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">ClientoClarify.AI</p>
+                            <p class="text-gray-600 text-xs leading-relaxed">Developed end-to-end ML/DL applications using CRISP-DM. Projects: Face Recognition App, Analysis SaaS Platform</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Technology Enabler</h4>
+                                <span class="timeline-year">2018</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">TMTS (BroadNexus)</p>
+                            <p class="text-gray-600 text-xs leading-relaxed">Developed ML models using the Prajna Framework. Projects: Prajna Bot, Chat Bot Models</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Research Assistant</h4>
+                                <span class="timeline-year">2017</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-2">IITBX</p>
+                            <p class="text-gray-600 text-xs leading-relaxed">Conducted ML/AI research, taught ML courses. Projects: CO2 Prediction, CO2 Monitor Dashboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <h3 class="text-xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center"><i class="fas fa-graduation-cap text-indigo-600 text-sm"></i></span>
+                    Education
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Master of Technology</h4>
+                                <span class="timeline-year">2016</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-1">Computer Science</p>
+                            <p class="text-gray-500 text-xs">SVCET (JNTU-A) &mdash; Sri Venkateswara College of Engineering Technology, Chittoor</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Bachelor of Technology</h4>
+                                <span class="timeline-year">2014</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-1">Information Technology</p>
+                            <p class="text-gray-500 text-xs">SVPCET (JNTU-A) &mdash; Sri Venkatesa Perumal College of Engineering &amp; Technology, Puttur</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Higher Secondary Education</h4>
+                                <span class="timeline-year">2010</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-1">MPC (Mathematics, Physics, Chemistry)</p>
+                            <p class="text-gray-500 text-xs">Rayalaseema Jr College, Tirupati</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="font-bold text-gray-800">Secondary Education</h4>
+                                <span class="timeline-year">2008</span>
+                            </div>
+                            <p class="text-indigo-600 text-sm font-medium mb-1">R.R. High School</p>
+                            <p class="text-gray-500 text-xs">Bairagipatteda, Tirupati</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 bg-gradient-to-br from-indigo-50 to-cyan-50 rounded-2xl p-6 border border-indigo-100">
+                    <h4 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-award text-indigo-600"></i> Key Achievements
+                    </h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Associate Manager at EY GDS &ndash; AI &amp; Data Practice</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Specialized in LLM fine-tuning and enterprise AI</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>7+ years in AI/ML research and industry</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Cross-industry: Insurance, Transport, Energy, IT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Set dynamic copyright year (runs independently of jQuery)
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="py-20" style="background:#f8fafc">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-cogs"></i>&nbsp; Offerings</div>
+            <h2 class="section-title mb-3">My <span class="gradient-text">Services</span></h2>
+            <p class="section-subtitle">Comprehensive AI/ML solutions tailored to your business needs.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon-wrapper"><img src="images/services/ml.png" alt="Machine Learning"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Machine Learning</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Systems that learn from data and make predictions &mdash; from image recognition to recommendation systems.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-icon-wrapper"><img src="images/services/dl.jpg" alt="Deep Learning"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Deep Learning</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Neural networks modeling complex patterns in large datasets &mdash; excelling in image and speech recognition.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon-wrapper"><img src="images/services/llm.png" alt="LLM & SLM"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">LLM &amp; SLM</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Advanced AI systems for understanding and generating human-like language &mdash; conversation, text generation, translation.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="service-icon-wrapper"><img src="images/services/da.png" alt="Data Analysis"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Data Analysis</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Inspecting and interpreting data to extract meaningful insights &mdash; identifying trends, patterns, and relationships.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon-wrapper"><img src="images/services/pa.png" alt="Predictive Analytics"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Predictive Analytics</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Statistical algorithms and ML to analyze historical data and forecast future outcomes for data-driven decisions.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="service-icon-wrapper"><img src="images/services/cv.png" alt="Computer Vision"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Computer Vision</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Enabling machines to interpret visual information &mdash; facial recognition, object detection, and autonomous navigation.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon-wrapper"><img src="images/services/nlp.png" alt="NLP"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Natural Language Processing</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">AI that understands and generates human language &mdash; chatbots, translation, and sentiment analysis.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+                <div class="service-icon-wrapper"><img src="images/services/rl.png" alt="Reinforcement Learning"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Reinforcement Learning</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Agents that learn from environment interactions &mdash; robotics, gaming, and autonomous systems.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon-wrapper"><img src="images/services/Agents.png" alt="Chatbot Development"></div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Chatbot Development</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">AI-powered conversational agents for customer service, information delivery, and interactive engagement.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills" class="bg-white py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-star"></i>&nbsp; Expertise</div>
+            <h2 class="section-title mb-3">My Core <span class="gradient-text">Skills</span></h2>
+            <p class="section-subtitle">A diverse skill set built through years of research and industry experience.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-group-title"><div class="skill-group-icon"><i class="fas fa-brain"></i></div>Generative AI &amp; LLMs</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">LLMs</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Fine-tuning</span><span class="skill-tag">RAG</span><span class="skill-tag">GANs</span><span class="skill-tag">VAEs</span><span class="skill-tag">Agentic AI</span><span class="skill-tag">LangChain</span>
+                </div>
+            </div>
+            <div class="skill-group" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-group-title"><div class="skill-group-icon"><i class="fas fa-network-wired"></i></div>ML &amp; Deep Learning</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Supervised ML</span><span class="skill-tag">Unsupervised ML</span><span class="skill-tag">Reinforcement RL</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">NLP</span><span class="skill-tag">MLOps</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span>
+                </div>
+            </div>
+            <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-group-title"><div class="skill-group-icon"><i class="fas fa-chart-bar"></i></div>Data Science</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Data Analysis</span><span class="skill-tag">Visualization</span><span class="skill-tag">Statistical Modeling</span><span class="skill-tag">Predictive Analytics</span><span class="skill-tag">Feature Engineering</span><span class="skill-tag">SQL</span><span class="skill-tag">NoSQL</span><span class="skill-tag">Pandas</span>
+                </div>
+            </div>
+            <div class="skill-group" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-group-title"><div class="skill-group-icon"><i class="fas fa-code"></i></div>Programming &amp; Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span><span class="skill-tag">Azure OpenAI</span><span class="skill-tag">AWS</span><span class="skill-tag">Git</span><span class="skill-tag">Docker</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">Hugging Face</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge light"><i class="fas fa-envelope"></i>&nbsp; Get in Touch</div>
+            <h2 class="section-title light mb-3">Interested? Then <span class="gradient-text">Contact Me</span></h2>
+            <p class="section-subtitle light">Say hello or ask a question. I'd love to hear from you!</p>
+            <div class="divider"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div data-aos="fade-right" data-aos-delay="100">
+                <div class="contact-card h-full">
+                    <h3 class="text-white font-bold text-xl mb-6">Let's build something amazing together</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="text-slate-400 text-xs mb-0.5">Email</div>
+                            <a href="mailto:reddyprasade@gmail.com" class="text-white font-medium text-sm hover:text-indigo-400 transition-colors">reddyprasade@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <div class="text-slate-400 text-xs mb-0.5">LinkedIn</div>
+                            <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener noreferrer" class="text-white font-medium text-sm hover:text-indigo-400 transition-colors">Esambati Reddy Prasad</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-youtube"></i></div>
+                        <div>
+                            <div class="text-slate-400 text-xs mb-0.5">YouTube</div>
+                            <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener noreferrer" class="text-white font-medium text-sm hover:text-indigo-400 transition-colors">@reddyprasade</a>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <p class="text-slate-400 text-xs mb-4">Follow me on social media</p>
+                        <div class="flex gap-3">
+                            <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-slate-400 hover:bg-indigo-600 hover:text-white transition-all" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                            <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-slate-400 hover:bg-red-600 hover:text-white transition-all" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                            <a href="https://www.facebook.com/reddyprasade/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-slate-400 hover:bg-blue-600 hover:text-white transition-all" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/reddyprasad_e/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-slate-400 hover:bg-pink-600 hover:text-white transition-all" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <div class="contact-card">
+                    <h3 class="text-white font-bold text-lg mb-6">Send a Message</h3>
+                    <form class="contact-form space-y-4" id="contactForm" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" name="name" placeholder="John Doe" required autocomplete="name">
+                            </div>
+                            <div>
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required autocomplete="email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contactSubject">Subject *</label>
+                            <input type="text" id="contactSubject" name="subject" placeholder="Project collaboration" required>
+                        </div>
+                        <div>
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="4" placeholder="Tell me about your project..." required style="resize:vertical"></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                        <div id="form-success" class="hidden text-center py-3 px-4 text-green-400 text-sm rounded-lg" style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3)">
+                            <i class="fas fa-check-circle mr-2"></i>Thanks! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer py-10">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="text-white font-bold text-lg mb-1">Reddy Prasad E<span class="text-indigo-400">.</span></div>
+                <p class="text-slate-500 text-xs">AI/ML Engineer &middot; Data Scientist &middot; GenAI Expert</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-slate-500 text-xs">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#services" class="hover:text-indigo-400 transition-colors">Services</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+            <div class="footer-social flex gap-3">
+                <a href="https://www.linkedin.com/in/esambati-reddy-prasad-03b12656/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
+                <a href="https://www.youtube.com/@reddyprasade/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube text-xs"></i></a>
+                <a href="https://www.facebook.com/reddyprasade/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
+                <a href="https://www.instagram.com/reddyprasad_e/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram text-xs"></i></a>
+                <a href="mailto:reddyprasade@gmail.com" aria-label="Email"><i class="fas fa-envelope text-xs"></i></a>
+            </div>
+        </div>
+        <div class="border-t border-white/5 mt-8 pt-6 text-center">
+            <p class="text-slate-600 text-xs">&copy; <span id="current-year"></span> Reddy Prasad E. All rights reserved. Designed with <span style="color:#ef4444">&#x2764;</span> by <a href="https://reddyprasade.github.io/" rel="nofollow" class="text-indigo-400 hover:text-indigo-300 transition-colors">Reddy Prasad</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to top button -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// AOS
+AOS.init({duration:700,once:true,offset:60});
+
+// NAVBAR SCROLL
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',function(){
+    if(window.scrollY>60){navbar.classList.add('scrolled')}
+    else{navbar.classList.remove('scrolled')}
+    // back to top
+    const btn=document.getElementById('back-to-top');
+    btn.classList.toggle('visible',window.scrollY>400);
+});
+
+// MOBILE MENU
+const menuBtn=document.getElementById('mobile-menu-button');
+const menuClose=document.getElementById('mobile-menu-close');
+const mobileMenu=document.getElementById('mobile-menu');
+const mobileNavLinks=document.querySelectorAll('.mobile-nav-link');
+const l1=document.getElementById('menu-line-1'),l2=document.getElementById('menu-line-2'),l3=document.getElementById('menu-line-3');
+function openMenu(){mobileMenu.classList.add('open');menuBtn.setAttribute('aria-expanded','true');l1.style.transform='rotate(45deg) translate(4px,4px)';l2.style.opacity='0';l3.style.transform='rotate(-45deg) translate(4px,-4px)';document.body.style.overflow='hidden';}
+function closeMenu(){mobileMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');l1.style.transform='';l2.style.opacity='';l3.style.transform='';document.body.style.overflow='';}
+menuBtn.addEventListener('click',function(){mobileMenu.classList.contains('open')?closeMenu():openMenu();});
+menuClose.addEventListener('click',closeMenu);
+mobileNavLinks.forEach(function(l){l.addEventListener('click',closeMenu);});
+
+// OWL CAROUSEL
+$(document).ready(function(){
+    $('#project-carousel').owlCarousel({
+        loop:true,margin:16,nav:true,
+        navText:['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+        autoplay:true,autoplayTimeout:3500,autoplayHoverPause:true,dots:true,
+        responsive:{0:{items:1},600:{items:2},900:{items:3}}
+    });
+});
+
+// TYPING EFFECT
+var phrases=['AI Solutions','LLM Systems','Deep Learning','GenAI Apps','Data Pipelines'];
+var pi=0,ci=0,del=false;
+var tel=document.getElementById('typing-element');
+function type(){
+    if(!tel)return;
+    var cur=phrases[pi];
+    if(del){
+        tel.textContent=cur.substring(0,ci--);
+        if(ci<0){del=false;pi=(pi+1)%phrases.length;ci=0;setTimeout(type,500);return;}
+        setTimeout(type,60);
+    }else{
+        tel.textContent=cur.substring(0,++ci);
+        if(ci===cur.length){del=true;setTimeout(type,2000);return;}
+        setTimeout(type,100);
+    }
+}
+setTimeout(type,800);
+
+// CONTACT FORM
+document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('contactName').value.trim();
+    var em=document.getElementById('contactEmail').value.trim();
+    var s=document.getElementById('contactSubject').value.trim();
+    var m=document.getElementById('contactMessage').value.trim();
+    if(!n||!em||!s||!m)return;
+    var btn=this.querySelector('.contact-submit');
+    btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';
+    btn.disabled=true;
+    setTimeout(function(){
+        document.getElementById('form-success').classList.remove('hidden');
+        btn.innerHTML='<i class="fas fa-check"></i> Sent!';
+        btn.style.background='linear-gradient(135deg,#10b981,#059669)';
+        document.getElementById('contactForm').reset();
+        setTimeout(function(){
+            document.getElementById('form-success').classList.add('hidden');
+            btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';
+            btn.style.background='';
+            btn.disabled=false;
+        },4000);
+    },1200);
+});
+
+// YEAR
+document.getElementById('current-year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
