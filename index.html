@@ -37,6 +37,7 @@
             <a href="#resume" class="nav-link-item text-white">Resume</a>
             <a href="#services" class="nav-link-item text-white">Services</a>
             <a href="#skills" class="nav-link-item text-white">Skills</a>
+            <a href="#certifications" class="nav-link-item text-white">Badges</a>
             <a href="#contact" class="bg-indigo-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-indigo-700 transition-all hover:shadow-lg hover:shadow-indigo-500/30">Contact</a>
         </div>
         <button id="mobile-menu-button" class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -60,6 +61,7 @@
         <a href="#resume" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Resume</a>
         <a href="#services" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Services</a>
         <a href="#skills" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Skills</a>
+        <a href="#certifications" class="mobile-nav-link py-3 px-4 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Badges</a>
         <a href="#contact" class="mt-4 bg-indigo-600 text-white text-center py-3 px-4 rounded-full font-semibold hover:bg-indigo-700 transition-colors mobile-nav-link">Contact Me</a>
     </div>
     <div class="flex gap-4 mt-8 px-4">
@@ -642,6 +644,35 @@
     </div>
 </section>
 
+<!-- ===== CERTIFICATIONS & BADGES SECTION ===== -->
+<section id="certifications" class="py-20" style="background:#f8fafc">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="section-badge"><i class="fas fa-award"></i>&nbsp; Credentials</div>
+            <h2 class="section-title mb-3">Certifications &amp; <span class="gradient-text">Badges</span></h2>
+            <p class="section-subtitle">Verified credentials and professional certifications earned through hands-on learning.</p>
+            <div class="divider"></div>
+        </div>
+        <div id="credly-badges-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="credly-loading" id="credly-loading">
+                <div class="credly-spinner"></div>
+                <span>Loading badges from Credly&hellip;</span>
+            </div>
+            <div class="credly-badges-grid hidden" id="credly-grid"></div>
+            <div class="credly-error hidden" id="credly-error">
+                <i class="fas fa-award text-4xl text-indigo-400 mb-4 block"></i>
+                <p class="text-gray-600 mb-6">Badges are hosted on Credly. Click below to view all verified credentials.</p>
+            </div>
+        </div>
+        <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="200">
+            <a id="credly-profile-link" href="https://www.credly.com/users/reddy-peasade/badges#credly" target="_blank" rel="noopener noreferrer" class="credly-view-all">
+                <i class="fas fa-external-link-alt"></i>
+                View All Badges on Credly
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CONTACT SECTION ===== -->
 <section id="contact" class="contact-section py-20">
     <div class="container mx-auto px-6">
@@ -738,6 +769,7 @@
                 <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
                 <a href="#services" class="hover:text-indigo-400 transition-colors">Services</a>
                 <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#certifications" class="hover:text-indigo-400 transition-colors">Badges</a>
                 <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <div class="footer-social flex gap-3">
@@ -845,6 +877,69 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
 
 // YEAR
 document.getElementById('current-year').textContent=new Date().getFullYear();
+
+// CREDLY BADGES
+(function(){
+    var CREDLY_USER='reddy-peasade';
+    var API_URL='https://www.credly.com/users/'+CREDLY_USER+'/badges.json';
+    var profileLink=document.getElementById('credly-profile-link');
+    if(profileLink)profileLink.href='https://www.credly.com/users/'+CREDLY_USER+'/badges#credly';
+    var loading=document.getElementById('credly-loading');
+    var grid=document.getElementById('credly-grid');
+    var error=document.getElementById('credly-error');
+
+    function escHtml(s){
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    function formatDate(str){
+        if(!str)return'';
+        var d=new Date(str);
+        if(isNaN(d.getTime()))return'';
+        return d.toLocaleDateString('en-US',{month:'short',year:'numeric'});
+    }
+
+    function renderBadges(badges){
+        grid.innerHTML='';
+        badges.forEach(function(b){
+            var imgUrl=(b.image&&b.image.url)||'';
+            var name=(b.badge_template&&b.badge_template.name)||b.name||'Badge';
+            var issuer=(b.badge_template&&b.badge_template.issuer&&b.badge_template.issuer.name)||'';
+            var url=b.public_url||('https://www.credly.com/badges/'+b.id);
+            var date=formatDate(b.issued_at);
+            var card=document.createElement('a');
+            card.href=url;
+            card.target='_blank';
+            card.rel='noopener noreferrer';
+            card.className='credly-badge-card';
+            var imgHtml=imgUrl
+                ?'<img src="'+escHtml(imgUrl)+'" alt="'+escHtml(name)+'" class="credly-badge-img" loading="lazy">'
+                :'<div class="credly-badge-img flex items-center justify-center"><i class="fas fa-award text-4xl text-indigo-400"></i></div>';
+            card.innerHTML=imgHtml
+                +'<div class="credly-badge-name">'+escHtml(name)+'</div>'
+                +(issuer?'<div class="credly-badge-issuer"><i class="fas fa-building credly-badge-issuer-icon"></i>'+escHtml(issuer)+'</div>':'')
+                +(date?'<div class="credly-badge-date">'+escHtml(date)+'</div>':'');
+            grid.appendChild(card);
+        });
+        loading.classList.add('hidden');
+        grid.classList.remove('hidden');
+    }
+
+    fetch(API_URL)
+        .then(function(r){
+            if(!r.ok)throw new Error('HTTP '+r.status);
+            return r.json();
+        })
+        .then(function(data){
+            var badges=(data.data||data.badges||[]);
+            if(badges.length===0)throw new Error('No badges');
+            renderBadges(badges);
+        })
+        .catch(function(){
+            loading.classList.add('hidden');
+            error.classList.remove('hidden');
+        });
+})();
 </script>
 </body>
 </html>
