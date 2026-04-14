@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: TMSR AI-Enhanced Incident Reporting Assistant - Reddy Prasad E</title>
+    <meta name="description" content="Details about the TMSR AI-Enhanced Incident Reporting Assistant project by Reddy Prasad E, an AI/ML Engineer." />
+    <meta name="author" content="Reddy Prasad E" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/Icons/DSC05273_32_32.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased font-inter bg-gray-50 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-gray-800 flex items-center">
+                <img src="../images/profile/img2.png" alt="Reddy Prasad E Logo" class="h-10 w-10 rounded-full mr-2">
+                Reddy Prasad E.
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="../index.html#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="../index.html#tools" class="text-gray-600 hover:text-indigo-600 transition duration-300">Tools</a>
+                <a href="../index.html#courses" class="text-gray-600 hover:text-indigo-600 transition duration-300">Courses</a>
+                <a href="../index.html#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
+                <a href="../index.html#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="../index.html#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+            <a href="../index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+            <a href="../index.html#tools" class="block py-2 px-4 text-sm hover:bg-gray-200">Tools</a>
+            <a href="../index.html#courses" class="block py-2 px-4 text-sm hover:bg-gray-200">Courses</a>
+            <a href="../index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-200">Resume</a>
+            <a href="../index.html#services" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+            <a href="../index.html#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="project-detail" class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Project: TMSR &mdash; AI-Enhanced Incident Reporting Assistant</h1>
+            <p class="text-indigo-600 font-medium mb-2">Tokio Marine &mdash; EY GDS Consulting (Mar 2025 &ndash; Present)</p>
+            <p class="text-gray-600 mb-8">A Generative AI PoC that automates the analysis of insurance incident reports by comparing police reports against incident descriptions, extracting key information, and surfacing discrepancies — improving efficiency and auditability for claims analysts.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Business Problem Statement</h2>
+            <p class="text-gray-600 mb-6">Incident reports at Tokio Marine were processed manually, requiring significant analyst effort to extract relevant details, identify patterns, and assess risk. A particularly time-consuming step involved manually comparing the incident description provided by the insured against the police report to find inconsistencies and flag potential fraud indicators. The PoC aimed to automate these steps using Generative AI, improving efficiency and auditability at scale.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Solution &amp; Key Capabilities</h2>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                <li>Automatically reads and interprets police reports and incident descriptions using Gen AI.</li>
+                <li>Extracts relevant information from incidents according to a structured requirements framework.</li>
+                <li>Identifies inconsistencies, discrepancies, and gaps between the two documents.</li>
+                <li>Flags individual alert points separately — both in the incident description and in the police report.</li>
+                <li>Produces bilingual output reports in <span class="font-medium">English and Portuguese</span> for the Brazilian market.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Front-End Features</h2>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                <li>Upload interface for Police Report and Incident Description documents.</li>
+                <li>One-click automatic comparative analysis execution.</li>
+                <li>Structured report output with categorized alerts — e.g., conflicting dates, inconsistent locations, missing information.</li>
+                <li>Bilingual report delivery (English &amp; Portuguese).</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Scope</h2>
+            <p class="text-gray-600 mb-6">The PoC covers automated document comparison and report generation. Additional chatbot interaction for ad-hoc comparison queries between the two documents is out of scope for the Pilot phase, as it would require further customization.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Tools &amp; Frameworks Used</h2>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>Generative AI &mdash; document parsing, information extraction, and comparison</li>
+                <li>Large Language Models (LLMs) for bilingual report generation</li>
+                <li>Python &mdash; backend processing and AI orchestration</li>
+                <li>Document upload and processing pipeline</li>
+                <li>AWS cloud infrastructure</li>
+                <li>Front-end interface for document upload and report display</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Reddy Prasad E. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed by <a href="https://reddyprasade.github.io/" rel="nofollow" class="underline hover:text-indigo-400">Reddy Prasad</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        $('#mobile-menu-button').click(function(){
+            $('#mobile-menu').toggleClass('hidden');
+        });
+    </script>
+</body>
+</html>
