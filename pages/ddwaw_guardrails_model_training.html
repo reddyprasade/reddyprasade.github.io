@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Guardrails Model Training (DDWAW-DAED) - Reddy Prasad E</title>
+    <meta name="description" content="Details about the DDWAW-DAED Guardrails Model Training project by Reddy Prasad E, an AI/ML Engineer." />
+    <meta name="author" content="Reddy Prasad E" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/Icons/DSC05273_32_32.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased font-inter bg-gray-50 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-gray-800 flex items-center">
+                <img src="../images/profile/img2.png" alt="Reddy Prasad E Logo" class="h-10 w-10 rounded-full mr-2">
+                Reddy Prasad E.
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="../index.html#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="../index.html#tools" class="text-gray-600 hover:text-indigo-600 transition duration-300">Tools</a>
+                <a href="../index.html#courses" class="text-gray-600 hover:text-indigo-600 transition duration-300">Courses</a>
+                <a href="../index.html#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
+                <a href="../index.html#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="../index.html#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+            <a href="../index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+            <a href="../index.html#tools" class="block py-2 px-4 text-sm hover:bg-gray-200">Tools</a>
+            <a href="../index.html#courses" class="block py-2 px-4 text-sm hover:bg-gray-200">Courses</a>
+            <a href="../index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-200">Resume</a>
+            <a href="../index.html#services" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+            <a href="../index.html#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="project-detail" class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Project: Guardrails Model Training</h1>
+            <p class="text-indigo-600 font-medium mb-2">DDWAW-DAED &mdash; EY GDS Consulting (Mar 2025 &ndash; Present)</p>
+            <p class="text-gray-600 mb-8">An end-to-end language model fine-tuning and evaluation platform built on AWS, enabling scalable model customization with guardrails for enterprise-grade safety and alignment.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Business Problem Statement</h2>
+            <p class="text-gray-600 mb-6">The client required a robust pipeline to fine-tune and evaluate large language models for guardrails use cases, ensuring responses remain safe, aligned, and governed. Existing tooling was limited to an on-premise Dell cluster with no cloud-native integration, no synthetic data strategy, and no repeatable evaluation framework — making scalable model adaptation and deployment very difficult.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Role &amp; Contributions</h2>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Cloud Architecture &amp; PoC Development</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Architected the high-level cloud solution using AWS services, defining the end-to-end approach for model customization, deployment, and inference aligned with enterprise PoC architecture standards.</li>
+                    <li>Developed a fine-tuning application PoC — including dataset &amp; model onboarding, training workflow, and evaluation pipelines — enabling seamless end-to-end language model customization and establishing the foundational workflow for scalable model adaptation.</li>
+                    <li>Enhanced the fine-tuning framework on AWS by extending the baseline fine-tuning script provided by the onsite team (originally developed for the Dell cluster), ensuring compatibility and cloud-native integration.</li>
+                    <li>Deployed base and fine-tuned models on AWS via CMI and executed comprehensive latency-focused inference testing using benchmark scenarios, evaluating performance across base models and measuring improvements achieved through fine-tuning.</li>
+                    <li>Led the end-to-end deployment and validation of the application within the EY AWS Sandbox environment, ensuring seamless integration and successful functional testing.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Governance, SDG Pipeline &amp; Model Training</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Established foundational setup and governance: selected base models, transferred model weights to cluster, set up Vanguard governance cadence, open code processes, budget tracking, and defined the model transfer protocol.</li>
+                    <li>Designed and operationalized the Synthetic Data Generation (SDG) pipeline: developed the SDG strategy by analyzing existing data, creating data volumes and target formats, selecting and labelling QA pairs, generating and validating synthetic datasets, creating SDG scripts, and standing up a red-teaming SDG pipeline to improve data quality and safety.</li>
+                    <li>Built the complete evaluation framework — including evaluation scripts, baseline model evaluation, and configuration validation — and stood up all base models on the cluster for inference, followed by detailed inference testing and benchmarking.</li>
+                    <li>Defined training/output data formats, formatted training datasets, deployed training scripts across model families, and executed the training run followed by multiple training iterations involving hypothesis documentation, data/algorithm modifications, evaluation runs, and results analysis.</li>
+                </ul>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Tools &amp; Frameworks Used</h2>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>AWS (SageMaker, CMI, Sandbox environment)</li>
+                <li>Large Language Models &mdash; fine-tuning &amp; inference</li>
+                <li>Synthetic Data Generation (SDG) pipeline</li>
+                <li>Red-teaming frameworks for data safety</li>
+                <li>Python &mdash; training scripts, evaluation pipelines</li>
+                <li>Model evaluation &amp; benchmarking tools</li>
+                <li>Vanguard governance &amp; open code processes</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Reddy Prasad E. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed by <a href="https://reddyprasade.github.io/" rel="nofollow" class="underline hover:text-indigo-400">Reddy Prasad</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        $('#mobile-menu-button').click(function(){
+            $('#mobile-menu').toggleClass('hidden');
+        });
+    </script>
+</body>
+</html>
