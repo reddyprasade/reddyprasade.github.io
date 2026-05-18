@@ -92,11 +92,17 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
 .project-view-btn { color: white; font-size: 0.8rem; font-weight: 600; background: var(--primary); padding: 0.4rem 1rem; border-radius: 50px; }
 
 /* TOOLS */
-.tool-badge { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; transition: all 0.3s ease; cursor: default; }
-.tool-badge:hover { border-color: #818cf8; background: #eef2ff; transform: translateY(-4px); box-shadow: 0 8px 20px rgba(79,70,229,0.15); }
-.tool-icon { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; color: white; }
-.tool-name { font-size: 0.68rem; font-weight: 600; color: #475569; text-align: center; line-height: 1.3; display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; }
-.tool-logo { width: 12px; height: 12px; object-fit: contain; border-radius: 2px; flex-shrink: 0; }
+.tools-category-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1rem; }
+.tools-category-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1rem; transition: all 0.3s ease; }
+.tools-category-card:hover { border-color: #c7d2fe; box-shadow: 0 10px 30px rgba(79,70,229,0.08); }
+.tools-category-title { font-size: 0.88rem; font-weight: 700; color: #1e293b; margin-bottom: 0.9rem; line-height: 1.4; display: flex; align-items: center; gap: 0.5rem; }
+.tools-category-title::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,var(--primary),var(--secondary)); box-shadow: 0 0 0 4px #eef2ff; flex-shrink: 0; }
+.tools-items-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+.tool-badge { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.75rem 0.5rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; min-height: 96px; transition: all 0.3s ease; cursor: default; }
+.tool-badge:hover { border-color: #818cf8; background: #eef2ff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(79,70,229,0.14); }
+.tool-logo-wrap { width: 44px; height: 44px; border-radius: 12px; background: white; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; padding: 8px; flex-shrink: 0; }
+.tool-logo { width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
+.tool-name { font-size: 0.68rem; font-weight: 600; color: #475569; text-align: center; line-height: 1.25; }
 
 /* COURSE CARDS */
 .course-card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
@@ -192,4 +198,9 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
 @media (max-width: 480px) {
     .hero-btn-primary,.hero-btn-secondary{width:100%;justify-content:center}
     .hero-image-wrapper{width:190px;height:190px}
+}
+
+@media (min-width: 768px) {
+    .tools-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+    .tools-items-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
