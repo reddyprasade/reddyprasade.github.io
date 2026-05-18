@@ -129,6 +129,8 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
 .service-card:hover .service-icon-wrapper { background: var(--primary); }
 .service-icon-wrapper img { width: 36px; height: 36px; object-fit: contain; transition: filter 0.3s ease; }
 .service-card:hover .service-icon-wrapper img { filter: brightness(0) invert(1); }
+.service-icon-wrapper i { transition: color 0.3s ease; }
+.service-card:hover .service-icon-wrapper i { color: #ffffff !important; }
 
 /* SKILLS */
 .skill-group { background: #f8fafc; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; height: 100%; }
