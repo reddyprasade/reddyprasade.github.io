@@ -118,7 +118,7 @@
                         <span class="text-2xl">&#x1F916;</span>
                         <div>
                             <div class="text-xs font-bold text-gray-800">AI/ML Expert</div>
-                            <div class="text-xs text-gray-500">7+ Years</div>
+                            <div class="text-xs text-gray-500"><span class="exp-years">7+</span> Years</div>
                         </div>
                     </div>
                     <div class="hero-image-wrapper">
@@ -147,7 +147,7 @@
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4">
             <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="stat-number">7+</div>
+                <div class="stat-number"><span class="exp-years">7+</span></div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
@@ -178,7 +178,7 @@
                     <span class="gradient-text">Intelligent Systems</span>
                 </h2>
                 <p class="text-slate-600 leading-relaxed mb-6 text-base">
-                    I'm Reddy Prasad, an AI/ML Engineer and Consultant with 7+ years of experience building intelligent systems. My expertise spans Generative AI, Data Science, and Deep Learning — crafting innovative solutions that transform complex data into actionable insights.
+                    I'm Reddy Prasad, an AI/ML Engineer and Consultant with <span class="exp-years">7+</span> years of experience building intelligent systems. My expertise spans Generative AI, Data Science, and Deep Learning — crafting innovative solutions that transform complex data into actionable insights.
                 </p>
                 <p class="text-slate-600 leading-relaxed mb-8 text-base">
                     I've held impactful roles at leading firms like EY GDS, Girikon, and Sumeru Solutions, applying cutting-edge AI across diverse industries including insurance, transportation, energy, and IT — driving efficiency and innovation at scale.
@@ -604,7 +604,7 @@
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Associate Manager at EY GDS &ndash; AI &amp; Data Practice</div>
                         <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Specialized in LLM fine-tuning and enterprise AI</div>
-                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>7+ years in AI/ML research and industry</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i><span class="exp-years">7+</span> years in AI/ML research and industry</div>
                         <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-green-500 text-xs"></i>Cross-industry: Insurance, Transport, Energy, IT</div>
                     </div>
                 </div>
@@ -948,6 +948,15 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
 
 // YEAR
 document.getElementById('current-year').textContent=new Date().getFullYear();
+
+// YEARS OF EXPERIENCE (auto-calculated from career start: January 2017)
+(function(){
+    var start=new Date(2017,0,1);
+    var now=new Date();
+    var years=now.getFullYear()-start.getFullYear()-(now<new Date(now.getFullYear(),start.getMonth(),start.getDate())?1:0);
+    var display=years+'+';
+    document.querySelectorAll('.exp-years').forEach(function(el){el.textContent=display;});
+})();
 
 // CREDLY BADGES
 (function(){
